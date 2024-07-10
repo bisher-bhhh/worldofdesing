@@ -1,2 +1,63 @@
-/vendor/
+# Laravel & PHP specific
+/vendor
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/.vagrant
+Homestead.json
+Homestead.yaml
 .env
+.env.testing
+
+# Laravel Swoole Server
+swoole_http.pid
+
+# Laravel IDE Helper
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php
+
+# Laravel generated files
+.phpunit.result.cache
+.phpunit.result.cache.*
+/storage/*.key
+/vendor/composer/installed.json
+
+# Composer & NPM logs
+composer.lock
+npm-debug.log
+yarn-error.log
+.pnp.*
+.pnp
+
+# Coverage reports
+coverage/
+
+# IDEs and editors
+/.idea
+/.vscode
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.cache
+*.temp
+*.tmp
+*.pid
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
