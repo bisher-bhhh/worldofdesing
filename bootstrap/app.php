@@ -15,7 +15,7 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
-// Add this line to set the new environment file path
+//y Add this line to set the new environment file path
 $app->useEnvironmentPath(dirname(__DIR__) . '/../secure-config');
 
 /*
