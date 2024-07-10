@@ -388,7 +388,7 @@
         <div class="row justify-content-center pt-5 mt-5">
             <div class="col-lg-9 text-center">
                 <div class="appear-animation" data-appear-animation="fadeInUpShorter">
-                    <h2 class="font-weight-bold mb-2">Projectssseeeqqqqqqqbisherwwwedfwe</h2>
+                    <h2 class="font-weight-bold mb-2">Projects</h2>
                     <p class="mb-4">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT</p>
                 </div>
                 <p class="pb-3 mb-4 appear-animation" data-appear-animation="fadeInUpShorter"
