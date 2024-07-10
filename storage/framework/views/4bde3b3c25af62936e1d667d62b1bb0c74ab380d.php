@@ -1,0 +1,240 @@
+<footer id="footer" class="mt-0">
+    <div class="footer-copyright">
+        <div class="container py-2">
+            <div class="row py-4">
+                <div class="col d-flex align-items-center justify-content-center">
+                    <p><strong>world of designs</strong> - © Copyright 2024. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<!-- Vendor -->
+<script src="<?php echo e(asset('assets/frontend/vendor/jquery/jquery.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/jquery.appear/jquery.appear.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/jquery.easing/jquery.easing.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/jquery.cookie/jquery.cookie.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js')); ?>"></script>
+
+<script src="<?php echo e(asset('assets/frontend/vendor/jquery.validation/jquery.validate.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/jquery.gmap/jquery.gmap.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/lazysizes/lazysizes.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/isotope/jquery.isotope.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/owl.carousel/owl.carousel.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/magnific-popup/jquery.magnific-popup.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/vide/jquery.vide.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/vivus/vivus.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/vendor/jquery.gmap/jquery.gmap.min.js')); ?>"></script>
+<!-- Theme Base, Components and Settings -->
+<script src="<?php echo e(asset('assets/frontend/js/theme.js')); ?>"></script>
+
+<script src="<?php echo e(asset('assets/frontend/js/views/view.contact.js')); ?>"></script>
+
+<!-- Theme Custom -->
+<script src="<?php echo e(asset('assets/frontend/js/custom.js')); ?>"></script>
+
+<!-- Theme Initialization Files -->
+<script src="<?php echo e(asset('assets/frontend/js/theme.init.js')); ?>"></script>
+
+<!-- Examples -->
+<script src="<?php echo e(asset('assets/frontend/js/examples.portfolio.js')); ?>"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+<script>
+
+    /*
+    Map Settings
+
+        Find the Latitude and Longitude of your address:
+            - https://www.latlong.net/
+            - http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
+
+    */
+
+    function initializeGoogleMaps() {
+        // Map Markers
+        var mapMarkers = [{
+            address: "New York, NY 10017",
+            html: "<strong>New York Office</strong><br>New York, NY 10017<br><br><a href='#' onclick='mapCenterAt({latitude: 40.75198, longitude: -73.96978, zoom: 16}, event)'>[+] zoom here</a>",
+            icon: {
+                image: "img/pin.png",
+                iconsize: [26, 46],
+                iconanchor: [12, 46]
+            }
+        }];
+
+        // Map Initial Location
+        var initLatitude = 40.75198;
+        var initLongitude = -73.96978;
+
+        // Map Extended Settings
+        var mapSettings = {
+            controls: {
+                draggable: (($.browser.mobile) ? false : true),
+                panControl: true,
+                zoomControl: true,
+                mapTypeControl: true,
+                scaleControl: true,
+                streetViewControl: true,
+                overviewMapControl: true
+            },
+            scrollwheel: false,
+            markers: mapMarkers,
+            latitude: initLatitude,
+            longitude: initLongitude,
+            zoom: 5
+        };
+
+        var map = $('#googlemaps').gMap(mapSettings),
+            mapRef = $('#googlemaps').data('gMap.reference');
+
+        // Styles from https://snazzymaps.com/
+        var styles = [{
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [{"color": "#e9e9e9"}, {"lightness": 17}]
+        }, {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [{"color": "#f5f5f5"}, {"lightness": 20}]
+        }, {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 17}]
+        }, {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 29}, {"weight": 0.2}]
+        }, {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 18}]
+        }, {
+            "featureType": "road.local",
+            "elementType": "geometry",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 16}]
+        }, {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [{"color": "#f5f5f5"}, {"lightness": 21}]
+        }, {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [{"color": "#dedede"}, {"lightness": 21}]
+        }, {
+            "elementType": "labels.text.stroke",
+            "stylers": [{"visibility": "on"}, {"color": "#ffffff"}, {"lightness": 16}]
+        }, {
+            "elementType": "labels.text.fill",
+            "stylers": [{"saturation": 36}, {"color": "#333333"}, {"lightness": 40}]
+        }, {"elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [{"color": "#f2f2f2"}, {"lightness": 19}]
+        }, {
+            "featureType": "administrative",
+            "elementType": "geometry.fill",
+            "stylers": [{"color": "#fefefe"}, {"lightness": 20}]
+        }, {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [{"color": "#fefefe"}, {"lightness": 17}, {"weight": 1.2}]
+        }];
+
+        var styledMap = new google.maps.StyledMapType(styles, {
+            name: 'Styled Map'
+        });
+
+        mapRef.mapTypes.set('map_style', styledMap);
+        mapRef.setMapTypeId('map_style');
+    }
+
+    // Initialize Google Maps when element enter on browser view
+    theme.fn.intObs('.google-map', 'initializeGoogleMaps()', {});
+
+    // Map text-center At
+    var mapCenterAt = function (options, e) {
+        e.preventDefault();
+        $('#googlemaps').gMap("centerAt", options);
+    }
+
+</script>
+<script>
+    function loadPage(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Perform any necessary actions here before loading the page
+
+        // Make an AJAX request to fetch the page content
+        fetch("<?php echo e(route('frontend.projects_test')); ?>")
+            .then(response => response.text())
+            .then(data => {
+                // Create a modal element
+                const modal = document.createElement('div');
+                modal.classList.add('modal');
+                modal.innerHTML = data;
+
+                // Append the modal to the document body
+                document.body.appendChild(modal);
+
+                // Show the modal using a modal library like Bootstrap
+                // Example using Bootstrap modal:
+                $(modal).modal('show');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+</script>
+<script>
+    (function( $ ) {
+
+        'use strict';
+        $('.simple-ajax-popup').magnificPopup({
+            type: 'ajax',
+            callbacks: {
+                open: function() {
+                    $('html').addClass('lightbox-opened');
+                },
+                close: function() {
+                    $('html').removeClass('lightbox-opened');
+                }
+            }
+        });
+    }).apply( this, [ jQuery ]);
+    (function( $ ) {
+
+        'use strict';
+
+        /*
+        * Custom See More Overlay
+        */
+        $('.custom-seemore-overlay-button').on('click', function(e){
+            e.preventDefault();
+
+            var $this    = $(this),
+                $wrapper = $this.closest('.custom-seemore-overlay');
+
+            $wrapper.addClass('active');
+
+            setTimeout(function(){
+                $this.closest('.custom-seemore-overlay').animate({
+                    'max-height': $wrapper[0].scrollHeight
+                }, function(){
+                    $this.remove();
+                    $wrapper.closest('.custom-seemore-overlay').css('max-height', 'none');
+                });
+            }, 200);
+        });
+
+    }).apply( this, [ jQuery ]);
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
+</body>
+</html>
+<?php /**PATH C:\wamp64\www\testbasel\pr\resources\views/frontend/footer.blade.php ENDPATH**/ ?>
