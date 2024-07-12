@@ -485,7 +485,7 @@
             <div class="row">
                 <div class="col text-center">
                     <h2 class="font-weight-bold text-color-light mb-2">We’re excited about Porto Template</h2>
-                    <p class="text-color-light opacity-7">30,000 CUSTOMERS IN 100 COUNTRIES USE PORTO TEMPLATE. MEET
+                    <p class="text-color-light opacity-7">TestTes . MEET
                         OUR CUSTOMERS.</p>
                 </div>
             </div>
