@@ -9,12 +9,12 @@
     <title>world of desing</title>
 
     <meta name="keywords" content="HTML5 Template"/>
-    <meta name="description" content="Porto - Responsive HTML5 Template">
-    <meta name="author" content="okler.net">
+    <meta name="description" content="World of Design">
+    <meta name="author" content="Bichr Briaghle">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo e(asset('assets/frontend/img/favicon.ico')); ?>" type="image/x-icon"/>
-    <link rel="apple-touch-icon" href="<?php echo e(asset('assets/frontend/img/apple-touch-icon.png')); ?>">
+    <link rel="shortcut icon" href="<?php echo e(asset('assets/frontend/img/word of designs 2 logo.png')); ?>" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="<?php echo e(asset('assets/frontend/img/word of designs 2 logo.png')); ?>">
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
