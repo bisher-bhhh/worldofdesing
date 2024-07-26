@@ -4,7 +4,7 @@
             <div class="row py-4">
                 <div class="col d-flex align-items-center justify-content-center">
                     <p><strong>world of designs</strong> - © Copyright 2024. All Rights Reserved </p>&nbsp;| Powered by &nbsp;
-                    <a href=" " style="color: #f6941c"> BH</a>
+                    <a href="https://bichrbraighle.worldofdesigns.ca/" style="color: #f6941c"> BH</a>
                 </div>
             </div>
         </div>
