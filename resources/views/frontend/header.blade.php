@@ -9,7 +9,7 @@
     <title>world of desing</title>
 
     <meta name="keywords" content="home renovation, interior design, custom interiors, flooring, painting"/>
-    <meta name="description" content="World of Design">
+{{--    <meta name="description" content="World of Design">--}}
     <meta name="author" content="Bichr Briaghle">
 
     <!-- Favicon -->
