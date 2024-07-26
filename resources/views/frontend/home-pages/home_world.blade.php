@@ -543,7 +543,7 @@
             <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                 <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
                     <span class="thumb-info-wrapper">
-                        <a href="about-me.html">
+                        <a href="{{route('frontend.ourTeam')}}">
                              @if(file_exists('assets/uploads/team-member/team-member-grid-'.$data->id.'.'.$data->image))
                                 <img src="{{asset('assets/uploads/team-member/team-member-grid-'.$data->id.'.'.$data->image)}}" alt="{{__($data->name)}}" class="img-fluid"
                                      >
@@ -672,7 +672,7 @@
                             </div>
                             <input type="hidden" name="_template" value="box">
                             <input type="hidden" name="_autoresponse" value="Thank you for sending the email. The support team from Bwa Creative Art Solutions will contact you">
-                            <input type="hidden" name="_next" value="http://localhost/testbasel/contactus">
+                            <input type="hidden" name="_next" value="info@worldofdesigns.ca/contactus">
                         </form>
                     </div>
 

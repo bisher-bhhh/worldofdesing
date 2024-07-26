@@ -189,11 +189,11 @@
                 <h3 class="d-block alternative-font-4 text-color-primary font-weight-medium text-4 text-lg-end mb-0 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400">LET'S TALK</h3>
                 <h2 class="text-color-dark font-weight-bold text-9 text-lg-end pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="600">Request Consultation</h2>
 
-                <form class="custom-form-style-1 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="800" action="https://formsubmit.co/lordbshr@gmail.com" method="POST">
+                <form class="custom-form-style-1 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="800" action="https://formsubmit.co/info@worldofdesigns.ca" method="POST">
                     @csrf
                     <input type="hidden" name="_template" value="box">
                     <input type="hidden" name="_autoresponse" value="Thank you for sending the email. The support team from Bwa Creative Art Solutions will contact you">
-                    <input type="hidden" name="_next" value="http://localhost/testbasel/contactus">
+                    <input type="hidden" name="_next" value="https://worldofdesigns.ca/contactus">
                     <div class="contact-form-success alert alert-success d-none mt-4">
                         <strong>Success!</strong> Your request has been sent to us.
                     </div>

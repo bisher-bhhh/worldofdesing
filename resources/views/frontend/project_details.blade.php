@@ -87,7 +87,7 @@
                                     <li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Client:</strong> {{$work->clients}}</li>
                                     <li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Date:</strong>  {{$work->start_date}}</li>
                                     <li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Category:</strong> <a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">{{get_work_category_by_id($work->id,'string')}}</a></li>
-                                    <li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Project URL:</strong> <a href="#" target="_blank" class="text-dark">http://localhost/testbasel/singleproject?id={{$work->id}}</a></li>
+                                    <li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Project URL:</strong> <a href="#" target="_blank" class="text-dark">https://worldofdesigns.ca/singleproject?id={{$work->id}}</a></li>
                                 </ul>
                             </div>
                         </div>
