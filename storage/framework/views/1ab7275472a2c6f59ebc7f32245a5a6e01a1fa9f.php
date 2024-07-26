@@ -40,6 +40,7 @@
 				<div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
 					<div id="portfolioLoadMoreWrapper" class="row portfolio-list sort-destination" data-sort-id="portfolio" data-total-pages="<?php echo e($all_work->lastPage()); ?>" data-ajax-url="<?php echo e(route('frontend.projects.load_more')); ?>">
 						<?php $__currentLoopData = $all_work; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
 							<?php $img_url = ''; ?>
 							<?php if(file_exists('assets/uploads/works/work-grid-'.$data->id.'.'.$data->image)): ?>
 								<?php $img_url = asset('assets/uploads/works/work-large-'.$data->id.'.'.$data->image); ?>
@@ -60,6 +61,7 @@
 									</a>
 								</div>
 							</div>
+
 						<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 					</div>
 

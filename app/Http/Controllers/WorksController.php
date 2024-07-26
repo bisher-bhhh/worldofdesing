@@ -8,7 +8,9 @@ use App\WorksCategory;
 use App\Images;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+
 class WorksController extends Controller
 {
     public function __construct()
@@ -26,6 +28,7 @@ class WorksController extends Controller
 
     public function store(Request $request)
     {
+        // Validate the request
         $this->validate($request, [
             'title' => 'required|string|max:191',
             'start_date' => 'nullable|string|max:191',
@@ -35,64 +38,81 @@ class WorksController extends Controller
             'clients' => 'nullable|string',
             'description' => 'required|string',
             'categories_id' => 'required',
-            'image' => 'mimes:jpg,jpeg,png|max:10000000',
-           
+            'images.*' => 'mimes:jpg,jpeg,png', // validate multiple images
         ]);
-        $work  = Works::create([
-            'title' => $request->title,
-            'start_date' => $request->start_date,
-            'end_date' => $request->end_date,
-            'location' => $request->location,
-            'lang' => $request->lang,
-            'clients' => $request->clients,
-            'description' => $request->description,
-            'categories_id' => serialize($request->categories_id),
-        ]);
-$id= $work->id;
-if ($request->hasFile('images')) {
-    $projectFolder = 'assets/uploads/works/' . $work->id;
 
-    // Create the folder if it doesn't exist
-    if (!File::exists($projectFolder)) {
-        File::makeDirectory($projectFolder, 0755, true);
-    }
+        // Use a transaction to ensure consistency
+        DB::beginTransaction();
 
-    foreach ($request->file('images') as $index => $image) {
-        $image_extension = $image->getClientOriginalExtension();
-        $image_name = 'work-' . $work->id . '-' . time() . '-' . $index . '.' . $image_extension;
-        $image_path = $projectFolder . '/' . $image_name;
-
-        // Resize image
-        $resizedImage = Image::make($image)->resize(800, 600, function ($constraint) {
-            $constraint->aspectRatio();
-            $constraint->upsize();
-        });
-
-        // Save the resized image
-        $resizedImage->save($image_path);
-
-        // Save image to the images table
-        Images::create([
-            'project_id' => $work->id,
-            'file_name' => $image_name,
-            'file_path' => $image_path
-        ]);
-    }
-}
-        if ($request->hasFile('image')) {
-            $image_extenstion = $request->image->getClientOriginalExtension();
-            $image_grid = 'work-grid-' . $id . '.' . $image_extenstion;
-            $image_large = 'work-large-' . $id . '.' . $image_extenstion;
-            if (check_image_extension($request->image)) {
-                $folder_path = 'assets/uploads/works/';
-                $resize_grid_image = Image::make($request->image)->resize(1170, 1170);
-                $resize_large_image = Image::make($request->image)->resize(1170, 1170);
-                $resize_grid_image->save($folder_path . $image_grid);
-                $resize_large_image->save($folder_path . $image_large);
-                Works::where('id', $id)->update(['image' => $image_extenstion]);
+        try {
+            // Create the work entry
+            $work = Works::create([
+                'title' => $request->title,
+                'start_date' => $request->start_date,
+                'end_date' => $request->end_date,
+                'location' => $request->location,
+                'lang' => $request->lang,
+                'clients' => $request->clients,
+                'description' => $request->description,
+                'categories_id' => serialize($request->categories_id),
+            ]);
+            $id= $work->id;
+            if ($request->hasFile('image')) {
+                $image_extenstion = $request->image->getClientOriginalExtension();
+                $image_grid = 'work-grid-' . $id . '.' . $image_extenstion;
+                $image_large = 'work-large-' . $id . '.' . $image_extenstion;
+                if (check_image_extension($request->image)) {
+                    $folder_path = 'assets/uploads/works/';
+                    $resize_grid_image = Image::make($request->image)->resize(1170, 1170);
+                    $resize_large_image = Image::make($request->image)->resize(1170, 1170);
+                    $resize_grid_image->save($folder_path . $image_grid);
+                    $resize_large_image->save($folder_path . $image_large);
+                    Works::where('id', $id)->update(['image' => $image_extenstion]);
+                }
             }
+            // Handle image uploads
+            if ($request->hasFile('images')) {
+                $projectFolder = 'assets/uploads/works/' . $work->id;
+
+                // Create the folder if it doesn't exist
+                File::ensureDirectoryExists($projectFolder, 0755, true);
+
+                $imagesData = [];
+
+                foreach ($request->file('images') as $index => $image) {
+                    $image_extension = $image->getClientOriginalExtension();
+                    $image_name = 'work-' . $work->id . '-' . time() . '-' . $index . '.' . $image_extension;
+                    $image_path = $projectFolder . '/' . $image_name;
+
+                    // Resize image
+                    $resizedImage = Image::make($image)
+                        ->resize(800, 600, function ($constraint) {
+                            $constraint->aspectRatio();
+                            $constraint->upsize();
+                        });
+
+                    // Save the resized image
+                    $resizedImage->save($image_path, 80); // Reduce quality to save space and time
+
+                    // Prepare image data for batch insert
+                    $imagesData[] = [
+                        'project_id' => $work->id,
+                        'file_name' => $image_name,
+                        'file_path' => $image_path,
+                    ];
+                }
+
+                // Batch insert images
+                Images::insert($imagesData);
+            }
+
+            DB::commit();
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return response()->json(['error' => 'An error occurred while processing the request.'], 500);
         }
-        return redirect()->back()->with(['msg' => 'New work Added...', 'type' => 'success']);
+
+        return redirect()->back()->with(['msg' => 'Works Item Created...', 'type' => 'success']);
     }
 
     public function update(Request $request)
@@ -108,18 +128,19 @@ if ($request->hasFile('images')) {
             'categories_id' => 'required',
             'image' => 'mimes:jpg,jpeg,png|max:10000000'
         ]);
-        Works::find($request->id)->update(
-            [
-                'title' => $request->title,
-                'start_date' => $request->start_date,
-                'end_date' => $request->end_date,
-                'lang' => $request->lang,
-                'location' => $request->location,
-                'clients' => $request->clients,
-                'description' => $request->description,
-                'categories_id' => serialize($request->categories_id),
-            ]
-        );
+
+        $work = Works::find($request->id);
+        $work->update([
+            'title' => $request->title,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
+            'lang' => $request->lang,
+            'location' => $request->location,
+            'clients' => $request->clients,
+            'description' => $request->description,
+            'categories_id' => serialize($request->categories_id),
+        ]);
+
         if ($request->hasFile('image')) {
             $image = $request->image;
             $image_extenstion = $image->getClientOriginalExtension();
@@ -131,7 +152,7 @@ if ($request->hasFile('images')) {
                 $resize_large_image = Image::make($image)->resize(740, 420);
                 $resize_grid_image->save($folder_path . $image_grid);
                 $resize_large_image->save($folder_path . $image_large);
-                Works::where('id', $request->id)->update(['image' => $image_extenstion]);
+                $work->update(['image' => $image_extenstion]);
             }
         }
         return redirect()->back()->with(['msg' => 'Works Item Updated...', 'type' => 'success']);
@@ -140,12 +161,22 @@ if ($request->hasFile('images')) {
     public function delete($id)
     {
         $works = Works::find($id);
-        if (file_exists('assets/uploads/works/work-grid-' . $id . '.' . $works->image)) {
-            unlink('assets/uploads/works/work-grid-' . $id . '.' . $works->image);
+
+        // Delete associated images
+        $images = Images::where('project_id', $id)->get();
+        foreach ($images as $image) {
+            if (File::exists($image->file_path)) {
+                File::delete($image->file_path);
+            }
+            $image->delete();
         }
-        if (file_exists('assets/uploads/works/work-large-' . $id . '.' . $works->image)) {
-            unlink('assets/uploads/works/work-large-' . $id . '.' . $works->image);
+
+        // Delete the work folder
+        $workFolder = 'assets/uploads/works/' . $id;
+        if (File::exists($workFolder)) {
+            File::deleteDirectory($workFolder);
         }
+
         $works->delete();
         return redirect()->back()->with(['msg' => 'Delete Success...', 'type' => 'danger']);
     }
@@ -207,12 +238,32 @@ if ($request->hasFile('images')) {
         ]);
     }
 
-    public function category_by_slug(Request $request){
-        $all_category = WorksCategory::where('lang',$request->lang)->get();
+    public function category_by_slug(Request $request)
+    {
+        $all_category = WorksCategory::where('lang', $request->lang)->get();
         return response()->json($all_category);
     }
 
+    public function storeImage(Request $request, $work_id)
+    {
+        $this->validate($request, [
+            'image' => 'required|mimes:jpg,jpeg,png|max:10064'
+        ]);
 
+        $new_image = $request->file('image');
+        $image_extension = $new_image->getClientOriginalExtension();
+        $image_name = 'work-' . $work_id . '-' . time() . '.' . $image_extension;
+        $projectFolder = 'assets/uploads/works/' . $work_id;
+        $new_image->move($projectFolder, $image_name);
+
+        Images::create([
+            'project_id' => $work_id,
+            'file_name' => $image_name,
+            'file_path' => $projectFolder . '/' . $image_name
+        ]);
+
+        return redirect()->route('admin.work.show', $work_id)->with(['msg' => 'Image added successfully', 'type' => 'success']);
+    }
 
     public function showimages($id)
     {
@@ -220,6 +271,7 @@ if ($request->hasFile('images')) {
 
         return view('backend.show', compact('work'));
     }
+
     public function editImage($work_id, $image_id)
     {
         $image = Images::where('project_id', $work_id)->where('id', $image_id)->firstOrFail();
@@ -233,7 +285,7 @@ if ($request->hasFile('images')) {
         ]);
 
         $image = Images::where('project_id', $work_id)->where('id', $image_id)->firstOrFail();
-        
+
         // Delete the old image
         if (File::exists($image->file_path)) {
             File::delete($image->file_path);
@@ -244,7 +296,7 @@ if ($request->hasFile('images')) {
         $image_name = 'work-' . $work_id . '-' . time() . '.' . $image_extension;
         $projectFolder = 'assets/uploads/works/' . $work_id;
         $new_image->move($projectFolder, $image_name);
-        
+
         $image->update([
             'file_name' => $image_name,
             'file_path' => $projectFolder . '/' . $image_name
@@ -252,6 +304,7 @@ if ($request->hasFile('images')) {
 
         return redirect()->route('admin.work.show', $work_id)->with(['msg' => 'Image updated successfully', 'type' => 'success']);
     }
+
     public function deleteImage($work_id, $image_id)
     {
         $image = Images::where('project_id', $work_id)->where('id', $image_id)->firstOrFail();
@@ -265,7 +318,4 @@ if ($request->hasFile('images')) {
 
         return redirect()->route('admin.work.show', $work_id)->with(['msg' => 'Image deleted successfully', 'type' => 'success']);
     }
-
 }
-
-

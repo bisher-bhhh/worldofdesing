@@ -22,7 +22,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="{{get_static_option('site_meta_description')}}">
     <meta name="tags" content="{{get_static_option('site_meta_tags')}}">
-    <link rel="icon" href="{{asset('assets/uploads/'.get_static_option('site_favicon'))}}" type="image/png">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <link rel="icon" href="{{asset('assets/uploads/'.get_static_option('site_favicon'))}}" type="image/png">
     <!-- load fonts dynamically -->
     {!! load_google_fonts() !!}
     <!-- all stylesheets -->

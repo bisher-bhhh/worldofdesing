@@ -8,7 +8,7 @@
                     <div class="header-column">
                         <div class="header-row">
                             <div class="header-logo">
-                                <a href="index.html">
+                                <a href="{{route('homepage')}}">
                                     <img alt="Porto" width="150" height="100" style="padding-top: 5px"
                                          src="{{asset('assets/frontend/img/word of designs 2 logo.png')}}">
                                 </a>
@@ -44,7 +44,7 @@
                                             </li>
                                             <li>
                                                 <a class="nav-link" data-hash data-hash-offset="0"
-                                                   data-hash-offset-lg="68" href="{{route('frontend.clients')}}">Meet the Team</a>
+                                                   data-hash-offset-lg="68" href="{{route('frontend.ourTeam')}}">Meet the Team</a>
                                             </li>
 {{--                                            <li>--}}
 {{--                                                <a class="nav-link" data-hash data-hash-offset="0"--}}

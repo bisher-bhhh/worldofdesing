@@ -9,7 +9,7 @@
                 <!-- Carousel Slide 1 -->
                 <?php $__currentLoopData = $all_header_slider; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <?php if($index == 1): ?>
-                        <div class="owl-item position-relative pt-5 overlay overlay-show overlay-op-8"
+                        <div class="owl-item position-relative  overlay overlay-show overlay-op-8"
                              style="background-size: cover; background-position: center; background-color: #35383d;">
                             <video autoplay muted loop class="position-absolute w-100 h-100" style="object-fit: cover;">
                                 <source src="<?php echo e(asset('assets/frontend/img/Martin Heck-la-palma-time-lapses-and-scenics-687814-filmsupply.mp4')); ?>" type="video/mp4">
@@ -64,7 +64,7 @@
                                                         <?php echo e($data->description); ?>
 
                                                     </p>
-                                                    <a href="#"
+                                                    <a href="<?php echo e(route('frontend.contactus')); ?>"
                                                        class="btn btn-primary btn-rounded font-weight-bold text-3 px-5 py-3 appear-animation"
                                                        data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600"
                                                        data-plugin-options="{'firstLoadNoAnim': true, 'minWindowWidth': 0}">GET STARTED NOW!</a>
@@ -236,7 +236,7 @@
                 <div class="row mb-2">
                     <?php $__currentLoopData = $all_service; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index=>$data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="col-md-6 col-xl-3">
-                            <a href="<?php echo e(route('frontend.servicedetails', ['id' => 1])); ?>"
+                            <a href="<?php echo e(route('frontend.servicedetails', ['id' => $data->id])); ?>"
                                 class="text-decoration-none simple-ajax-popup">
                                 <div class="featured-box featured-box-primary featured-box-effect-5 appear-animation"
                                     data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
@@ -267,7 +267,7 @@
 
             <div class="row">
                 <div class="col text-center">
-                    <a data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#contactus"
+                    <a data-hash data-hash-offset="0" data-hash-offset-lg="95" href="<?php echo e(route('frontend.contactus')); ?>"
                         class="btn btn-dark btn-outline custom-btn-color-1 font-weight-extra-bold text-color-light text-3 px-5 py-3 border-width-4 appear-animation"
                         data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">CONTACT US</a>
                 </div>
@@ -414,6 +414,7 @@
                     <div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
                         <div class="row  portfolio-list sort-destination" data-sort-id="portfolio">
                             <?php $__currentLoopData = $all_work; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php if($index<=5): ?>
                                 <div
                                     class="col-lg-4 p-1 isotope-item <?php echo e(get_work_category_by_id($data->id, 'slug')); ?>">
                                     <div class="portfolio-item">
@@ -442,6 +443,7 @@
                                         </a>
                                     </div>
                                 </div>
+                                <?php endif; ?>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             
                             
@@ -472,7 +474,7 @@
             </div>
             <div class="row pt-5">
                 <div class="col text-center">
-                    <a data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#contactus"
+                    <a data-hash data-hash-offset="0" data-hash-offset-lg="95" href="<?php echo e(route('frontend.allprojects')); ?>"
                         class="btn btn-dark btn-outline custom-btn-color-2 font-weight-extra-bold text-color-dark text-3 px-5 py-3 text-hover-light border-width-4 appear-animation"
                         data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">More</a>
                 </div>
@@ -488,7 +490,7 @@
             <div class="row">
                 <div class="col text-center">
                     <h2 class="font-weight-bold text-color-light mb-2">We’re excited about Porto Template</h2>
-                    <p class="text-color-light opacity-7">30,000 CUSTOMERS IN 100 COUNTRIES USE PORTO TEMPLATE. MEET
+                    <p class="text-color-light opacity-7">TestTes . MEET
                         OUR CUSTOMERS.</p>
                 </div>
             </div>
@@ -498,34 +500,23 @@
 
                     <div class="owl-carousel owl-theme nav-bottom rounded-nav mb-0"
                         data-plugin-options="{'items': 1, 'loop': true, 'autoHeight': true}">
-                        <div>
-                            <div
-                                class="testimonial testimonial-style-2 testimonial-light testimonial-with-quotes testimonial-quotes-primary mb-0">
-                                <blockquote>
-                                    <p class="text-5 line-height-5 mb-0">Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor.
-                                        Suspendisse potenti.</p>
-                                </blockquote>
-                                <div class="testimonial-author">
-                                    <p><strong class="font-weight-extra-bold text-2">- John Smith. Okler</strong>
-                                    </p>
+                        <?php $__currentLoopData = $all_testimonial; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <div>
+                                <div
+                                        class="testimonial testimonial-style-2 testimonial-light testimonial-with-quotes testimonial-quotes-primary mb-0">
+                                    <blockquote>
+                                        <p class="text-5 line-height-5 mb-0"><?php echo e($data-> description); ?></p>
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <p><strong class="font-weight-extra-bold text-2">- <?php echo e($data->name); ?></strong>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div
-                                class="testimonial testimonial-style-2 testimonial-light testimonial-with-quotes testimonial-quotes-primary mb-0">
-                                <blockquote>
-                                    <p class="text-5 line-height-5 mb-0">Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor.
-                                        Suspendisse potenti.</p>
-                                </blockquote>
-                                <div class="testimonial-author">
-                                    <p><strong class="font-weight-extra-bold text-2">- John Smith. Okler</strong>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+
                     </div>
 
                 </div>
@@ -542,101 +533,72 @@
         </div>
         <div class="row pb-5 mb-5 appear-animation" data-appear-animation="fadeInUpShorter"
             data-appear-animation-delay="200">
+            <?php $__currentLoopData = $all_team_members; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
             <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                 <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
                     <span class="thumb-info-wrapper">
                         <a href="about-me.html">
-                            <img src="<?php echo e(asset('assets/frontend/img/team/team-1.jpg')); ?>" class="img-fluid"
-                                alt="">
+                             <?php if(file_exists('assets/uploads/team-member/team-member-grid-'.$data->id.'.'.$data->image)): ?>
+                                <img src="<?php echo e(asset('assets/uploads/team-member/team-member-grid-'.$data->id.'.'.$data->image)); ?>" alt="<?php echo e(__($data->name)); ?>" class="img-fluid"
+                                     >
+                            <?php endif; ?>
+
+
                         </a>
                     </span>
                     <span class="thumb-info-caption">
-                        <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0">John Doe</h3>
-                        <span class="text-2 mb-0">CEO</span>
-                        <span class="thumb-info-caption-text pt-1">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Cras ac ligula mi, non suscipitaccumsan</span>
+                        <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0"><?php echo e($data->name); ?></h3>
+                        <span class="text-2 mb-0"><?php echo e($data->designation); ?></span>
+                        <span class="thumb-info-caption-text pt-1"><?php echo e($data->description); ?></span>
                         <span class="thumb-info-social-icons">
-                            <a target="_blank" href="http://www.facebook.com"><i
-                                    class="fab fa-facebook-f"></i><span>Facebook</span></a>
-                            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                            <a href="http://www.linkedin.com"><i
-                                    class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
+                                <?php if(!empty($data->icon_one) && !empty($data->icon_one_url)): ?>
+
+                                <a target="_blank" href="<?php echo e($data->icon_one_url); ?>"><i
+                                            class="<?php echo e($data->icon_one); ?>"></i><span>Facebook</span></a>
+                            <?php endif; ?>
+
+
+
+                                         <?php if(!empty($data->icon_two) && !empty($data->icon_two_url)): ?>
+                                        
+                                        <a target="_blank" href="<?php echo e($data->icon_two_url); ?>"><i
+                                                    class="<?php echo e($data->icon_two); ?>"></i></a>
+                                    <?php endif; ?>
+                                    <?php if(!empty($data->icon_three) && !empty($data->icon_three_url)): ?>
+                                        
+                                        <a target="_blank" href="<?php echo e($data->icon_three_url); ?>"><i
+                                                    class="<?php echo e($data->icon_three); ?>"></i></a>
+                                    <?php endif; ?>
                         </span>
                     </span>
                 </span>
             </div>
-            <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
-                <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
-                    <span class="thumb-info-wrapper">
-                        <a href="about-me.html">
-                            <img src="<?php echo e(asset('assets/frontend/img/team/team-2.jpg')); ?>" class="img-fluid"
-                                alt="">
-                        </a>
-                    </span>
-                    <span class="thumb-info-caption">
-                        <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0">Jessica Doe
-                        </h3>
-                        <span class="text-2 mb-0">DESIGNER</span>
-                        <span class="thumb-info-caption-text pt-1">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Cras ac ligula mi, non suscipitaccumsan</span>
-                        <span class="thumb-info-social-icons">
-                            <a target="_blank" href="http://www.facebook.com"><i
-                                    class="fab fa-facebook-f"></i><span>Facebook</span></a>
-                            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                            <a href="http://www.linkedin.com"><i
-                                    class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
-                        </span>
-                    </span>
-                </span>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
-                <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
-                    <span class="thumb-info-wrapper">
-                        <a href="about-me.html">
-                            <img src="<?php echo e(asset('assets/frontend/img/team/team-3.jpg')); ?>" class="img-fluid"
-                                alt="">
-                        </a>
-                    </span>
-                    <span class="thumb-info-caption">
-                        <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0">Ricki Doe
-                        </h3>
-                        <span class="text-2 mb-0">DEVELOPER</span>
-                        <span class="thumb-info-caption-text pt-1">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Cras ac ligula mi, non suscipitaccumsan</span>
-                        <span class="thumb-info-social-icons">
-                            <a target="_blank" href="http://www.facebook.com"><i
-                                    class="fab fa-facebook-f"></i><span>Facebook</span></a>
-                            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                            <a href="http://www.linkedin.com"><i
-                                    class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
-                        </span>
-                    </span>
-                </span>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
-                    <span class="thumb-info-wrapper">
-                        <a href="about-me.html">
-                            <img src="<?php echo e(asset('assets/frontend/img/team/team-4.jpg')); ?>" class="img-fluid"
-                                alt="">
-                        </a>
-                    </span>
-                    <span class="thumb-info-caption">
-                        <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0">Melinda Doe
-                        </h3>
-                        <span class="text-2 mb-0">SEO ANALYST</span>
-                        <span class="thumb-info-caption-text pt-1">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Cras ac ligula mi, non suscipitaccumsan</span>
-                        <span class="thumb-info-social-icons">
-                            <a target="_blank" href="http://www.facebook.com"><i
-                                    class="fab fa-facebook-f"></i><span>Facebook</span></a>
-                            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                            <a href="http://www.linkedin.com"><i
-                                    class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
-                        </span>
-                    </span>
-                </span>
-            </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
 

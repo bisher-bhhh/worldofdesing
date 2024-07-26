@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-12 align-self-center p-static order-2 text-center">
-                    <h1 class="text-12 font-weight-semibold">Our Projects</h1>
+                    <h1 class="text-12 font-weight-semibold">Contact us</h1>
                 </div>
                 <div class="col-md-12 align-self-center order-1">
                     <ul class="breadcrumb breadcrumb-light d-block text-center">
@@ -27,11 +27,11 @@
                             <h2 class="font-weight-bold text-color-dark text-6 text-lg-5 text-xl-7 pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Get In Touch</h2>
                             <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">
                                 <h3 class="alternative-font-4 font-weight-bold text-color-dark text-transform-none text-4 mb-0">Work Inquiries</h3>
-                                <a href="tel:+1234567890" class="d-inline-block text-color-default text-color-hover-primary text-decoration-none mb-4">(800) 123-4567</a>
+                                <a href="tel:+12899526861" class="d-inline-block text-color-default text-color-hover-primary text-decoration-none mb-4">+1 289-952-6861</a>
                             </div>
                             <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">
                                 <h3 class="alternative-font-4 font-weight-bold text-color-dark text-transform-none text-4 mb-0">Careers & Press</h3>
-                                <a href="tel:+1234567890" class="d-inline-block text-color-default text-color-hover-primary text-decoration-none mb-4">(800) 123-4567</a>
+                                <a href="tel:+12899526861" class="d-inline-block text-color-default text-color-hover-primary text-decoration-none mb-4">+1 289-952-6861</a>
                             </div>
                             <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900">
                                 <h3 class="alternative-font-4 font-weight-bold text-color-dark text-transform-none text-4 mb-0">Assistance Hours</h3>
@@ -42,11 +42,11 @@
                             <h2 class="font-weight-bold text-color-dark text-6 text-lg-5 text-xl-7 pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1100">Address and Mail</h2>
                             <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1300">
                                 <h3 class="alternative-font-4 font-weight-bold text-color-dark text-transform-none text-4 mb-0">Address</h3>
-                                <p>12345 Porto Blvd. <br>Suite 1500 <br>Los Angeles, California 90000</p>
+                                <p>4400 Millcroft Park drive,<br>Burlington, ON,  <br>Canada, Ontario</p>
                             </div>
                             <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1500">
                                 <h3 class="alternative-font-4 font-weight-bold text-color-dark text-transform-none text-4 mb-0">Email</h3>
-                                <a href="mailto:mail@example.com" class="text-color-default text-color-hover-primary text-decoration-underline mb-4">mail@example.com</a>
+                                <a href="mailto:info@worldofdesigns.ca" class="text-color-default text-color-hover-primary text-decoration-underline mb-4">info@worldofdesigns.ca</a>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                                     <div class="card-header">
                                         <h4 class="card-title m-0">
                                             <a class="accordion-toggle text-color-dark font-weight-semibold text-2-5 collapsed" data-bs-toggle="collapse" href="#collapseFAQOne">
-                                                1- Why choose Porto Law?
+                                                1- Why choose word of design Law?
                                             </a>
                                         </h4>
                                     </div>
@@ -189,7 +189,11 @@
                 <h3 class="d-block alternative-font-4 text-color-primary font-weight-medium text-4 text-lg-end mb-0 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400">LET'S TALK</h3>
                 <h2 class="text-color-dark font-weight-bold text-9 text-lg-end pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="600">Request Consultation</h2>
 
-                <form class="contact-form custom-form-style-1 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="800" action="php/contact-form.php" method="POST">
+                <form class="custom-form-style-1 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="800" action="https://formsubmit.co/lordbshr@gmail.com" method="POST">
+                    @csrf
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_autoresponse" value="Thank you for sending the email. The support team from Bwa Creative Art Solutions will contact you">
+                    <input type="hidden" name="_next" value="http://localhost/testbasel/contactus">
                     <div class="contact-form-success alert alert-success d-none mt-4">
                         <strong>Success!</strong> Your request has been sent to us.
                     </div>
@@ -219,11 +223,13 @@
                             <textarea maxlength="5000" data-msg-required="Please enter your message." rows="9" class="form-control border-radius-0" name="message" id="message" required placeholder="Message *"></textarea>
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="form-group col text-lg-end mb-0">
-                            <button type="submit" class="btn btn-primary font-weight-bold btn-px-5 btn-py-3 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="350" data-loading-text="Loading...">REQUEST CONSULTATION</button>
+                            <button type="submit" class="btn btn-primary font-weight-bold btn-px-5 btn-py-3 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="350" data-loading-text="Loading...">Send</button>
                         </div>
                     </div>
+
                 </form>
             </div>
         </div>
@@ -233,13 +239,13 @@
             <div class="row">
                 <div class="col-md-9 col-lg-9">
                     <div class="call-to-action-content">
-                        <h2 class="font-weight-normal text-6 mb-0">Word of Designs<strong class="font-weight-extra-bold">everything</strong> you need to create an <strong class="font-weight-extra-bold">awesome</strong> House!</h2>
+                        <h2 class="font-weight-normal text-6 mb-0">Word of Designs <strong class="font-weight-extra-bold">everything</strong> you need to create an <strong class="font-weight-extra-bold">awesome</strong> House!</h2>
                         <p class="mb-0">Contact Us</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-lg-3">
                     <div class="call-to-action-btn">
-                        <a href="http://themeforest.net/item/porto-responsive-html5-template/4106987" target="_blank" class="btn btn-dark btn-lg text-3 font-weight-semibold px-4 py-3">Get Started Now</a><span class="arrow hlb d-none d-md-block" data-appear-animation="rotateInUpLeft" style="top: -40px; left: 70%;"></span>
+                        <a href="" target="_blank" class="btn btn-dark btn-lg text-3 font-weight-semibold px-4 py-3">Get Started Now</a><span class="arrow hlb d-none d-md-block" data-appear-animation="rotateInUpLeft" style="top: -40px; left: 70%;"></span>
                     </div>
                 </div>
             </div>

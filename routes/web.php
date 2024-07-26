@@ -28,7 +28,7 @@ Route::group(['middleware' => ['setlang','globalVariable']],function (){
     Route::get('/service','FrontendController@service_page')->name('frontend.service');
     Route::get('/work','FrontendController@work_page')->name('frontend.work');
     Route::get('/faq','FrontendController@faq_page')->name('frontend.faq');
-    Route::get('/clients','FrontendController@getclients')->name('frontend.clients');
+    Route::get('/ourTeam','FrontendController@getclients')->name('frontend.ourTeam');
     Route::get('/testprojects','FrontendController@gettestProjects')->name('frontend.projects_test');
     Route::get('/allprojects','FrontendController@getallProjects')->name('frontend.allprojects');
        Route::get('/servicedetails/{id}','FrontendController@getdetailssevice')->name('frontend.servicedetails');
@@ -285,7 +285,7 @@ Route::prefix('admin-home')->group(function (){
     Route::post('/delete-blog-category/{id}','BlogController@delete_category')->name('admin.blog.category.delete');
     Route::post('/update-blog-category','BlogController@update_category')->name('admin.blog.category.update');
     Route::post('/blog-lang-by-cat','BlogController@Language_by_slug')->name('admin.blog.lang.cat');
-
+    Route::post('/work/{work_id}/image', 'WorksController@storeImage')->name('admin.work.image.store');
     //user role management
     Route::get('/new-user','UserRoleManageController@new_user')->name('admin.new.user');
     Route::post('/new-user','UserRoleManageController@new_user_add');

@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row mt-5">
                     <div class="col-md-12 align-self-center p-static order-2 text-center">
-                        <h1 class="text-12 font-weight-semibold">Our Projects</h1>
+                        <h1 class="text-12 font-weight-semibold">Our Services</h1>
                     </div>
                     <div class="col-md-12 align-self-center order-1">
                         <ul class="breadcrumb breadcrumb-light d-block text-center">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="col-lg-2 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="500">
-                <a href="#" class="btn btn-modern btn-dark mt-1">Get a Quote!</a>
+                <a href="<?php echo e(route('frontend.contactus')); ?>" class="btn btn-modern btn-dark mt-1">Get a Quote!</a>
             </div>
         </div>
 

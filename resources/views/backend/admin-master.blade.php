@@ -32,6 +32,7 @@
     @yield('style')
     <!-- modernizr css -->
     <script src="{{asset('assets/common/vendor/modernizr-2.8.3.min.js')}}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/css/fontawesome-iconpicker.css" integrity="sha512-9yS+ck0i78HGDRkAdx+DR+7htzTZJliEsxQOoslJyrDoyHvtoHmEv/Tbq8bEdvws7s1AVeCjCMOIwgZTGPhySw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -137,7 +138,8 @@
 <script src="{{asset('assets/backend/js/metisMenu.min.js')}}"></script>
 <script src="{{asset('assets/backend/js/jquery.slimscroll.min.js')}}"></script>
 <script src="{{asset('assets/backend/js/jquery.slicknav.min.js')}}"></script>
-<script src="{{asset('assets/backend/js/fontawesome-iconpicker.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js" integrity="sha512-7dlzSK4Ulfm85ypS8/ya0xLf3NpXiML3s6HTLu4qDq7WiJWtLLyrXb9putdP3/1umwTmzIvhuu9EW7gHYSVtCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 @yield('script')
 <script src="{{asset('assets/backend/js/plugins.js')}}"></script>
 <script src="{{asset('assets/backend/js/scripts.js')}}"></script>

@@ -304,25 +304,17 @@ public function get_project()
         ]);
     }
 public function  getclients(){
-    return view('frontend.clients');
+    $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default',1)->first()->slug;
+    $all_team_members = TeamMember::where('lang',$lang)->orderBy('id','desc')->take(get_static_option('home_page_01_team_member_section_items'))->get();;
+
+    return view('frontend.clients')->with([ 'all_team_members' => $all_team_members,]);
 
 }
 public function getdetailssevice($id){
     $service_item = Services::where('id',$id)->first();
-        $service_category = ServiceCategory::where('status','publish')->get();
+//        $service_category = ServiceCategory::where('status','publish')->get();
 //    dd($id);
-        if($id==1)
-        {
-            return view('frontend.portfolio-ajax-details',['id' => $id]);
-        }elseif ($id==2)
-        {
-            return view('frontend.portfolio-ajax-details', ['id' => $id]);
-        }elseif($id==3){
-            return view('frontend.portfolio-ajax-details', ['id' => $id]);
-        }
-        elseif($id==4){
-            return view('frontend.portfolio-ajax-details', ['id' => $id]);
-        }
+    return view('frontend.portfolio-ajax-details', ['service_item' => $service_item]);
 
 }
     public function  gettestProjects(){

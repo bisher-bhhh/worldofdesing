@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row mt-5">
                     <div class="col-md-12 align-self-center p-static order-2 text-center">
-                        <h1 class="text-12 font-weight-semibold">Our Projects</h1>
+                        <h1 class="text-12 font-weight-semibold">Our Services</h1>
                     </div>
                     <div class="col-md-12 align-self-center order-1">
                         <ul class="breadcrumb breadcrumb-light d-block text-center">
@@ -34,12 +34,12 @@
             <div class="col-lg-10">
                 <div class="overflow-hidden">
                     <p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla non <span class="alternative-font">metus.</span> pulvinar. Sociis natoque penatibus et magnis dis parturient montes.
+                        At Word of Design, we specialize in creating stunning <span class="alternative-font">designs</span> that elevate your brand. Let us bring your vision to life with our expertise and creativity.
                     </p>
                 </div>
             </div>
             <div class="col-lg-2 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="500">
-                <a href="#" class="btn btn-modern btn-dark mt-1">Get a Quote!</a>
+                <a href="{{route('frontend.contactus')}}" class="btn btn-modern btn-dark mt-1">Get a Quote!</a>
             </div>
         </div>
 
@@ -55,54 +55,56 @@
                     <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="700">
                         <div class="featured-box featured-box-effect-4">
                             <div class="box-content">
-                                <i class="icon-featured icon-screen-tablet icons text-color-primary bg-color-grey"></i>
-                                <h4 class="font-weight-bold">Mobile Apps</h4>
-                                <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+                                <i class=" icon-featured icon-home icons text-color-primary bg-color-grey"></i>
+                                <h4 class="font-weight-bold">Architectural Design</h4>
+                                <p class="px-3">Transforming visions into stunning realities. Our designs are tailored to your unique needs, blending functionality with aesthetic appeal.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="900">
                         <div class="featured-box featured-box-effect-4">
                             <div class="box-content">
-                                <i class="icon-featured icon-layers icons text-color-light bg-color-primary"></i>
-                                <h4 class="font-weight-bold">Creative Websites</h4>
-                                <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+
+{{--                                <img src="{{asset('assets/frontend/img/livingroom.png')}}  "   width="25px" class="icons text-color-light bg-color-primary">--}}
+                                <i class="icon-featured fa fa-wand-magic-sparkles text-color-light bg-color-primary"></i>
+                                <h4 class="font-weight-bold">Interior Design</h4>
+                                <p class="px-3">Creating inspiring and practical spaces. We focus on details that enhance your environment and elevate your daily experiences.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="1100">
                         <div class="featured-box featured-box-effect-4">
                             <div class="box-content">
-                                <i class="icon-featured icon-magnifier icons text-color-primary bg-color-grey"></i>
-                                <h4 class="font-weight-bold">SEO Optimization</h4>
-                                <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+                                <i class="icon-featured fa-solid fa-tree-city icons text-color-primary bg-color-grey"></i>
+                                <h4 class="font-weight-bold">Urban Planning</h4>
+                                <p class="px-3">Crafting vibrant and efficient communities. Our planning solutions address both aesthetic and practical aspects to improve urban living.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="1500">
                         <div class="featured-box featured-box-effect-4">
                             <div class="box-content">
-                                <i class="icon-featured icon-screen-desktop icons text-color-light bg-color-primary"></i>
-                                <h4 class="font-weight-bold">Brand Solutions</h4>
-                                <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+                                <i class="icon-featured fa fa-mountain-sun icons text-color-light bg-color-primary"></i>
+                                <h4 class="font-weight-bold">Landscape Architecture</h4>
+                                <p class="px-3">Designing beautiful and functional outdoor spaces. We integrate natural elements with creative solutions to enhance your environment.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="1300">
                         <div class="featured-box featured-box-effect-4">
                             <div class="box-content">
-                                <i class="icon-featured icon-doc icons text-color-primary bg-color-grey"></i>
-                                <h4 class="font-weight-bold">HTML5 / CSS3 / JS</h4>
-                                <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+                                <i class="icon-featured fa-solid fa-cubes icons text-color-primary bg-color-grey"></i>
+                                <h4 class="font-weight-bold">3D Visualization</h4>
+                                <p class="px-3">Bringing your projects to life with realistic 3D renderings. Visualize your ideas in detail before the first stone is laid.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="1100">
                         <div class="featured-box featured-box-effect-4">
                             <div class="box-content">
-                                <i class="icon-featured icon-menu icons text-color-light bg-color-primary"></i>
-                                <h4 class="font-weight-bold">Buttons</h4>
-                                <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+                                <i class="icon-featured fa fa-list-check icons text-color-light bg-color-primary"></i>
+                                <h4 class="font-weight-bold">Project Management</h4>
+                                <p class="px-3">Ensuring seamless execution of your architectural projects. We handle every aspect to keep your project on track and within budget.</p>
                             </div>
                         </div>
                     </div>
@@ -119,12 +121,14 @@
 
                     <div class="row align-items-center pt-4 appear-animation" data-appear-animation="fadeInLeftShorter">
                         <div class="col-md-4 mb-4 mb-md-0">
-                            <img class="img-fluid scale-2 pe-5 pe-md-0 my-4" src="img/layout-styles.png" alt="layout styles" />
+                            <img class="img-fluid scale-2 pe-5 pe-md-0 my-4" src="{{asset('assets/frontend/img/shutterstock_676661200.jpg')}}" alt="layout styles" />
+
+
                         </div>
                         <div class="col-md-8 ps-md-5">
-                            <h2 class="font-weight-normal text-6 mb-3"><strong class="font-weight-extra-bold">Layout</strong> Styles &amp; Variants</h2>
-                            <p class="text-4">There are so many styles you can combine that is possible to create almost any kind of layout based on Porto Template, navigate in our preview and see the header variations, the colors, and the page content types that you will be able to use.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.</p>
+                            <h2 class="font-weight-normal text-6 mb-3"><strong class="font-weight-extra-bold">Innovative</strong> Design Solutions</h2>
+                            <p class="text-4">At Word of Design, we redefine construction with a blend of innovation and precision. As specialists in diverse construction projects, we excel in delivering exceptional quality and efficiency.</p>
+                            <p>Our team’s expertise spans residential, commercial, and industrial sectors, ensuring each project is executed with the utmost professionalism and attention to detail. Partner with us to turn your vision into reality, leveraging our commitment to excellence for outstanding results.</p>
                         </div>
                     </div>
 
@@ -132,12 +136,12 @@
 
                     <div class="row align-items-center pt-5 pb-3 appear-animation" data-appear-animation="fadeInRightShorter">
                         <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
-                            <h2 class="font-weight-normal text-6 mb-3"><strong class="font-weight-extra-bold">Exclusive</strong> Style Switcher</h2>
-                            <p class="text-4">With our exlusive Style Switcher you will be able to choose any color you want for your website, choose the layout style (wide / boxed), website type (one page / normal), then generate the css that will be compiled by a {less} proccessor.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.</p>
+                            <h2 class="font-weight-normal text-6 mb-3"><strong class="font-weight-extra-bold">Cutting-Edge</strong> Construction Solutions</h2>
+                            <p class="text-4">At Word of Design, we provide cutting-edge construction solutions that set new standards in innovation and quality. Our team excels in delivering exceptional results for both residential and commercial projects.</p>
+                            <p>From initial design to final touches, we ensure precision and efficiency at every step. With a commitment to exceeding expectations, we turn your construction vision into a standout reality. Experience excellence with every project.</p>
                         </div>
                         <div class="col-md-4 px-5 px-md-3">
-                            <img class="img-fluid scale-2 my-4" src="img/style-switcher.png" alt="style switcher" />
+                            <img class="img-fluid scale-2 my-4" src="{{asset('assets/frontend/img/shutterstock_2193273999.jpg')}}" alt="style switcher" />
                         </div>
                     </div>
                 </div>
@@ -166,8 +170,8 @@
                         </div>
                         <div class="feature-box-info ps-1">
                             <h5 class="font-weight-light text-color-light opacity-7 mb-0">CALL US NOW</h5>
-                            <a href="tel:+8001234567"
-                               class="text-color-light font-weight-semibold text-decoration-none">800-123-4567</a>
+                            <a href="tel:+12899526861"
+                               class="text-color-light font-weight-semibold text-decoration-none">+1 289-952-6861</a>
                         </div>
                     </div>
                 </div>
@@ -180,7 +184,7 @@
                         <div class="feature-box-info ps-1">
                             <h5 class="font-weight-light text-color-light opacity-7 mb-0">FOLLOW US</h5>
                             <p class="mb-0">
-                                    <span class="social-icons-facebook"><a href="http://www.facebook.com/"
+                                    <span class="social-icons-facebook"><a href="https://www.facebook.com/profile.php?id=100088148767303"
                                                                            target="_blank"
                                                                            class="text-color-light font-weight-semibold"
                                                                            title="Facebook"><i

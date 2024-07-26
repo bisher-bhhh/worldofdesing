@@ -32,7 +32,7 @@
                         <img src="{{ $img_url }}" class="img-fluid" alt="">
                         <span class="thumb-info-title text-start">
                             <span class="thumb-info-inner font-weight-bold line-height-1 text-4 mb-3">{{ $data->title }}</span>
-                            <span class="thumb-info-type text-transform-none font-weight-light text-1 line-height-7 pe-xl-5 me-5">{{ $data->description }}</span>
+                            <span class="thumb-info-type text-transform-none font-weight-light text-1 line-height-7 pe-xl-5 me-5">{{ get_work_category_by_id($data->id, 'slug') }}</span>
                         </span>
                     </span>
                 </span>

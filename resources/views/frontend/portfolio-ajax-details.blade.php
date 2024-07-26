@@ -72,8 +72,8 @@
 <div id="custom-content" class="white-popup-block bg-dark white-popup-block-lg">
 	<div class="row">
 		<div class="col">
-			<h3 class="font-weight-bold text-color-light text-7 text-capitalize ls-0 my-3">Home Projects</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut nunc in enim laoreet ornare. Nullam tincidunt tempor ligula eu dignissim. Nam semper dui quis congue mollis. Nam at tellus ultricies, tincidunt quam non, rhoncus mauris. Nullam gravida molestie lorem, et euismod metus feugiat ac.</p>
+			<h3 class="font-weight-bold text-color-light text-7 text-capitalize ls-0 my-3">{{ $service_item->title }}</h3>
+		{!!  $service_item->description !!}
 		</div>
 	</div>
 	<hr>
@@ -84,8 +84,18 @@
 					<div class="col">
 						<div class="featured-box">
 							<div class="box-content p-0 border-0">
-								<svg style="fill: #FFF;" enable-background="new 0 0 24 24" height="88px" version="1.1" viewBox="0 0 24 24" width="88px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M18,11h-5v5h5V11z M15,15h-1v-3h1V15z M17,15h-1v-3h1V15z"/><path d="M23,22h-1v-9.2l0.3,0.3c0.4,0.4,1,0.4,1.4,0l0,0c0.4-0.4,0.4-1,0-1.4L12,0L7,5V3c0.6,0,1-0.4,1-1V1c0-0.6-0.4-1-1-1H3   C2.4,0,2,0.4,2,1v1c0,0.6,0.4,1,1,1v6l-2.7,2.7c-0.4,0.4-0.4,1,0,1.4l0,0c0.4,0.4,1,0.4,1.4,0L2,12.8V22H1c-0.6,0-1,0.4-1,1v1h24   v-1C24,22.4,23.6,22,23,22z M12,2.8l8,8V22h-9v-8H6v8H4V10.8L12,2.8z M10,19v3H7v-7h3v3H9v1H10z M4,8V3h2v3L4,8z M3,1h4v1H3V1z"/></g></svg>
-							</div>
+								@if($service_item->id==25)
+									<img height="87px" src="{{asset('assets/frontend/img/building.png')}}">
+								@endif
+								@if($service_item->id==26)
+									<img height="87px" src="{{asset('assets/frontend/img/sketch.png')}}">
+								@endif
+								@if($service_item->id==27)
+									<img height="87px" src="{{asset('assets/frontend/img/save-forest.png')}}">
+								@endif
+								@if($service_item->id==28)
+									<img height="87px" src="{{asset('assets/frontend/img/staircase.png')}}">
+								@endif							</div>
 						</div>
 					</div>
 				</div>
@@ -95,10 +105,10 @@
 {{--			console.log('ServiceID: {{ $id }}');--}}
 {{--		</script>--}}
 		<div class="col-lg-8">
-			<p>ServiceID: {{ $id }}Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut nunc in enim laoreet ornare. Nullam tincidunt tempor ligula eu dignissim. Nam semper dui quis congue mollis.</p>
+			<p>Reach out to us for a consultation and let’s explore how we can bring your project to life. From initial concept to final execution, we are committed to delivering excellence at every stage.</p>
 
 			<p class="mb-0"><span class="text-color-light text-4 mb-3">CALL US NOW</span></p>
-			<p class="mb-3"><a href="tel:+1234567890" class="text-decoration-none text-color-primary font-weight-bold line-height-2 text-6 opacity-10">1-800-123-4567</a></p>
+			<p class="mb-3"><a href="tel:+12899526861" class="text-decoration-none text-color-primary font-weight-bold line-height-2 text-6 opacity-10">1 289-952-6861</a></p>
 		</div>
 	</div>
 </div>

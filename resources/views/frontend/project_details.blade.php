@@ -1,4 +1,15 @@
 @extends('frontend.frontend-page-master')
+@php $img_url = '';@endphp
+@if(file_exists('assets/uploads/works/work-grid-'.$work->id.'.'.$work->image))
+    @php $img_url = asset('assets/uploads/works/work-large-'.$work->id.'.'.$work->image); @endphp
+@endif
+@section('og-meta')
+    <meta property="og:url"
+          content="{{route('frontend.singleproject', ['id' => $work->id])}}"/>
+    <meta property="og:type" content="project"/>
+    <meta property="og:title" content="{{$work->title}}"/>
+    <meta property="og:image" content="{{$img_url}}"/>
+@endsection
 @section('content')
 <div role="main" class="main">
     <section class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-7" style="background-image: url(img/page-header/page-header-background-transparent-2.jpg);">
@@ -20,8 +31,9 @@
     <section class="section section-height-3 bg-light border-0 m-0">
         <div class="container container-xl-custom">
             <div class="row">
+                <h1 class="font-weight-bold text-center">{{$work->title}}</h1>
                 <div class="col text-center">
-                    <p class="text-4 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut nunc in enim laoreet ornare. Nullam tincidunt tempor ligula eu dignissim. Nam semper dui quis congue mollis.<br>Nam at tellus ultricies, tincidunt quam non, rhonus mauris. Nullam gravida molestie lorem, et euismod metus feugiat ac.</p>
+                    <p class="text-4 mb-5">Crafting quality residential, commercial, and industrial spaces with precision and innovation.</p>
                 </div>
             </div>
 

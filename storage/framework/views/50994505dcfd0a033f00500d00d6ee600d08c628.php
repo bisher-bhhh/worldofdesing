@@ -18,7 +18,9 @@
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-
+    <meta name="description" content="<?php echo e(get_static_option('site_meta_description')); ?>">
+    <meta name="tags" content="<?php echo e(get_static_option('site_meta_tags')); ?>">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <!-- Web Fonts  -->
     <link id="googleFonts"
           href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light&display=swap"
@@ -47,7 +49,10 @@
 
     <!-- Head Libs -->
     <script src="<?php echo e(asset('assets/frontend/vendor/modernizr/modernizr.min.js')); ?>"></script>
+    <?php if(request()->is('blog/*') || request()->is('singleproject') || request()->is('service/*')): ?>
 
+        <?php echo $__env->yieldContent('og-meta'); ?>
+    <?php endif; ?>
 </head>
 
 <?php /**PATH C:\wamp\www\testbasel\pr\resources\views/frontend/header.blade.php ENDPATH**/ ?>

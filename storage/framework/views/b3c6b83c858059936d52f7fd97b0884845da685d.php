@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-12 align-self-center p-static order-2 text-center">
-                    <h1 class="text-12 font-weight-semibold">Our Projects</h1>
+                    <h1 class="text-12 font-weight-semibold">Contact us</h1>
                 </div>
                 <div class="col-md-12 align-self-center order-1">
                     <ul class="breadcrumb breadcrumb-light d-block text-center">
@@ -237,7 +237,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3">
                     <div class="call-to-action-btn">
-                        <a href="http://themeforest.net/item/porto-responsive-html5-template/4106987" target="_blank" class="btn btn-dark btn-lg text-3 font-weight-semibold px-4 py-3">Get Started Now</a><span class="arrow hlb d-none d-md-block" data-appear-animation="rotateInUpLeft" style="top: -40px; left: 70%;"></span>
+                        <a href="" target="_blank" class="btn btn-dark btn-lg text-3 font-weight-semibold px-4 py-3">Get Started Now</a><span class="arrow hlb d-none d-md-block" data-appear-animation="rotateInUpLeft" style="top: -40px; left: 70%;"></span>
                     </div>
                 </div>
             </div>

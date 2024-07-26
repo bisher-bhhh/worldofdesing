@@ -22,10 +22,12 @@
 					<div class="col-lg-9 text-center">
 						<div class="appear-animation" data-appear-animation="fadeInUpShorter">
 							<h2 class="font-weight-bold mb-2">Projects</h2>
-							<p class="mb-4">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT</p>
+							<p class="mb-4">Our projects showcase top-tier architectural excellence<br>
+								Each design reflects our commitment to quality and innovation.</p>
 						</div>
 						<p class="pb-3 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut nunc in enim laoreet ornare. Nullam tincidunt tempor ligula eu dignissim. Nam semper dui quis congue mollis. Nam at tellus ultricies, tincidunt quam non, rhonus mauris. Nullam gravida molestie lorem, et euismod metus feugiat ac.
+							We believe in the power of great architecture to inspire and transform. With every project, we strive to push the boundaries of creativity and functionality. Explore our work and see how we turn visions into reality.</p>
+
 						</p>
 					</div>
 				</div>
@@ -41,6 +43,7 @@
 				<div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
 					<div id="portfolioLoadMoreWrapper" class="row portfolio-list sort-destination" data-sort-id="portfolio" data-total-pages="{{ $all_work->lastPage() }}" data-ajax-url="{{ route('frontend.projects.load_more') }}">
 						@foreach($all_work as $index => $data)
+
 							@php $img_url = ''; @endphp
 							@if(file_exists('assets/uploads/works/work-grid-'.$data->id.'.'.$data->image))
 								@php $img_url = asset('assets/uploads/works/work-large-'.$data->id.'.'.$data->image); @endphp
@@ -53,7 +56,7 @@
                             <img src="{{ $img_url }}" class="img-fluid" alt="">
                             <span class="thumb-info-title text-start">
                                 <span class="thumb-info-inner font-weight-bold line-height-1 text-4 mb-3">{{ $data->title }}</span>
-                                <span class="thumb-info-type text-transform-none font-weight-light text-1 line-height-7 pe-xl-5 me-5">{{ $data->description }}</span>
+                                <span class="thumb-info-type text-transform-none font-weight-light text-1 line-height-7 pe-xl-5 me-5">{{ get_work_category_by_id($data->id, 'slug') }}</span>
                             </span>
                         </span>
                     </span>
@@ -61,9 +64,9 @@
 									</a>
 								</div>
 							</div>
+
 						@endforeach
 					</div>
-
 					<div id="portfolioLoadMoreBtnWrapper" class="row">
 						<div class="col">
 							<div id="portfolioLoadMoreLoader" class="portfolio-load-more-loader">
@@ -75,7 +78,6 @@
 							</div>
 
 							<button id="portfolioLoadMore" type="button" class="btn btn-dark btn-modern w-100 text-1 text-uppercase outline-none mb-5 p-3">Load More</button>
-
 
 						</div>
 					</div>

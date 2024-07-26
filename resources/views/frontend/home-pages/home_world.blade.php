@@ -9,12 +9,19 @@
                 <!-- Carousel Slide 1 -->
                 @foreach ($all_header_slider as $index => $data)
                     @if ($index == 1)
-                        <div class="owl-item position-relative pt-5 overlay overlay-show overlay-op-8"
+                        <div class="owl-item position-relative  overlay overlay-show overlay-op-8"
                              style="background-size: cover; background-position: center; background-color: #35383d;">
                             <video autoplay muted loop class="position-absolute w-100 h-100" style="object-fit: cover;">
-                                <source src="{{ asset('assets/frontend/img/Martin Heck-la-palma-time-lapses-and-scenics-687814-filmsupply.mp4') }}" type="video/mp4">
+                                <source src="{{ asset('assets/frontend/img/VID_20240211_140757_668.mp4 (1).mov') }}" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
+                            @elseif($index==2)
+                                <div class="owl-item position-relative  overlay overlay-show overlay-op-8"
+                                     style="background-size: cover; background-position: center; background-color: #35383d;">
+                                <video autoplay muted loop class="position-absolute w-100 h-100" style="object-fit: cover;">
+                                    <source src="{{ asset('assets/frontend/img/Martin Heck-la-palma-time-lapses-and-scenics-687814-filmsupply.mp4') }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             @else
                                 <div class="owl-item position-relative pt-5 overlay overlay-show overlay-op-8"
                                      style="background-image: url({{ asset('assets/uploads/header-sliders/header-slider-image-' . $data->id . '.' . $data->image) }}); background-size: cover; background-position: center; background-color: #35383d;">
@@ -34,7 +41,7 @@
                                          data-plugin-options="{'firstLoadNoAnim': true, 'minWindowWidth': 0}"
                                          alt="" />
                                 </span>
-                                                        WE WORK HARD AND World of designs HAS
+                                                        Welcome to World of Design
                                                         <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
                                     <img src="{{ asset('assets/frontend/img/slides/slide-title-border.png') }}"
                                          class="w-auto appear-animation"
@@ -45,6 +52,7 @@
                                 </span>
                                                     </h3>
                                                     <h2 class="text-color-light font-weight-extra-bold text-12 mb-4 appear-animation"
+                                                        style="text-align: center"
                                                         data-appear-animation="blurIn" data-appear-animation-delay="500"
                                                         data-plugin-options="{'firstLoadNoAnim': true, 'minWindowWidth': 0}">
                                                         @php
@@ -62,7 +70,7 @@
                                                        data-plugin-options="{'startDelay': 1000, 'firstLoadNoAnim': true, 'minWindowWidth': 0, 'animationSpeed': 25}">
                                                         {{ $data->description }}
                                                     </p>
-                                                    <a href="#"
+                                                    <a href="{{route('frontend.contactus')}}"
                                                        class="btn btn-primary btn-rounded font-weight-bold text-3 px-5 py-3 appear-animation"
                                                        data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600"
                                                        data-plugin-options="{'firstLoadNoAnim': true, 'minWindowWidth': 0}">GET STARTED NOW!</a>
@@ -234,7 +242,7 @@
                 <div class="row mb-2">
                     @foreach ($all_service as $index=>$data)
                         <div class="col-md-6 col-xl-3">
-                            <a href="{{ route('frontend.servicedetails', ['id' => 1]) }}"
+                            <a href="{{ route('frontend.servicedetails', ['id' => $data->id]) }}"
                                 class="text-decoration-none simple-ajax-popup">
                                 <div class="featured-box featured-box-primary featured-box-effect-5 appear-animation"
                                     data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
@@ -265,7 +273,7 @@
 
             <div class="row">
                 <div class="col text-center">
-                    <a data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#contactus"
+                    <a data-hash data-hash-offset="0" data-hash-offset-lg="95" href="{{route('frontend.contactus')}}"
                         class="btn btn-dark btn-outline custom-btn-color-1 font-weight-extra-bold text-color-light text-3 px-5 py-3 border-width-4 appear-animation"
                         data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">CONTACT US</a>
                 </div>
@@ -373,12 +381,12 @@
             <div class="col-lg-9 text-center">
                 <div class="appear-animation" data-appear-animation="fadeInUpShorter">
                     <h2 class="font-weight-bold mb-2">Projects</h2>
-                    <p class="mb-4">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT</p>
+                    <p class="mb-4">Our projects showcase top-tier architectural excellence<br>
+                        Each design reflects our commitment to quality and innovation.
+                    </p>
                 </div>
                 <p class="pb-3 mb-4 appear-animation" data-appear-animation="fadeInUpShorter"
-                    data-appear-animation-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                    elementum, nulla vel pellentesque consequat, ante nulla hendrerit arcu, ac tincidunt mauris
-                    lacus sed leo. vamus suscipit molestie vestibulum.</p>
+                    data-appear-animation-delay="200">We believe in the power of great architecture to inspire and transform. With every project, we strive to push the boundaries of creativity and functionality. Explore our work and see how we turn visions into reality.</p>
             </div>
         </div>
         <div class="row pb-5 mb-5">
@@ -388,6 +396,7 @@
                     <div class="bounce-loader">
                         <div class="bounce1"></div>
                         <div class="bounce2"></div>
+                        <div class="bounce3"></div>
                         <div class="bounce3"></div>
                     </div>
 
@@ -412,6 +421,7 @@
                     <div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
                         <div class="row  portfolio-list sort-destination" data-sort-id="portfolio">
                             @foreach ($all_work as $index => $data)
+                                @if($index<=5)
                                 <div
                                     class="col-lg-4 p-1 isotope-item {{ get_work_category_by_id($data->id, 'slug') }}">
                                     <div class="portfolio-item">
@@ -439,6 +449,7 @@
                                         </a>
                                     </div>
                                 </div>
+                                @endif
                             @endforeach
                             {{--                        <div class="col-lg-3 p-1 isotope-item apartment"> --}}
                             {{--                            <div class="portfolio-item"> --}}
@@ -469,7 +480,7 @@
             </div>
             <div class="row pt-5">
                 <div class="col text-center">
-                    <a data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#contactus"
+                    <a data-hash data-hash-offset="0" data-hash-offset-lg="95" href="{{route('frontend.allprojects')}}"
                         class="btn btn-dark btn-outline custom-btn-color-2 font-weight-extra-bold text-color-dark text-3 px-5 py-3 text-hover-light border-width-4 appear-animation"
                         data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">More</a>
                 </div>
@@ -484,9 +495,8 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <h2 class="font-weight-bold text-color-light mb-2">We’re excited about Porto Template</h2>
-                    <p class="text-color-light opacity-7">TestTes . MEET
-                        OUR CUSTOMERS.</p>
+                    <h2 class="font-weight-bold text-color-light mb-2">Our Satisfied Customers</h2>
+                    <p class="text-color-light opacity-7">See how our solutions have elevated their projects and transformed their visions</p>
                 </div>
             </div>
 
@@ -495,34 +505,23 @@
 
                     <div class="owl-carousel owl-theme nav-bottom rounded-nav mb-0"
                         data-plugin-options="{'items': 1, 'loop': true, 'autoHeight': true}">
-                        <div>
-                            <div
-                                class="testimonial testimonial-style-2 testimonial-light testimonial-with-quotes testimonial-quotes-primary mb-0">
-                                <blockquote>
-                                    <p class="text-5 line-height-5 mb-0">Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor.
-                                        Suspendisse potenti.</p>
-                                </blockquote>
-                                <div class="testimonial-author">
-                                    <p><strong class="font-weight-extra-bold text-2">- John Smith. Okler</strong>
-                                    </p>
+                        @foreach($all_testimonial as $key => $data)
+                            <div>
+                                <div
+                                        class="testimonial testimonial-style-2 testimonial-light testimonial-with-quotes testimonial-quotes-primary mb-0">
+                                    <blockquote>
+                                        <p class="text-5 line-height-5 mb-0">{{$data-> description}}</p>
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <p><strong class="font-weight-extra-bold text-2">- {{$data->name}}</strong>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div
-                                class="testimonial testimonial-style-2 testimonial-light testimonial-with-quotes testimonial-quotes-primary mb-0">
-                                <blockquote>
-                                    <p class="text-5 line-height-5 mb-0">Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor.
-                                        Suspendisse potenti.</p>
-                                </blockquote>
-                                <div class="testimonial-author">
-                                    <p><strong class="font-weight-extra-bold text-2">- John Smith. Okler</strong>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+
+
+
                     </div>
 
                 </div>
@@ -534,106 +533,75 @@
         <div class="row pt-5 mt-5 mb-4">
             <div class="col text-center appear-animation" data-appear-animation="fadeInUpShorter">
                 <h2 class="font-weight-bold mb-1">Team</h2>
-                <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT</p>
+                <p>At World of design, our expert architectural team delivers innovative,<br> sustainable designs with exceptional attention to detail, transforming visions into reality.</p>
             </div>
         </div>
         <div class="row pb-5 mb-5 appear-animation" data-appear-animation="fadeInUpShorter"
             data-appear-animation-delay="200">
+            @foreach($all_team_members as $data)
+
             <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                 <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
                     <span class="thumb-info-wrapper">
                         <a href="about-me.html">
-                            <img src="{{ asset('assets/frontend/img/team/team-1.jpg') }}" class="img-fluid"
-                                alt="">
+                             @if(file_exists('assets/uploads/team-member/team-member-grid-'.$data->id.'.'.$data->image))
+                                <img src="{{asset('assets/uploads/team-member/team-member-grid-'.$data->id.'.'.$data->image)}}" alt="{{__($data->name)}}" class="img-fluid"
+                                     >
+                            @endif
+{{--                            <img src="{{ asset('assets/frontend/img/team/team-1.jpg') }}" class="img-fluid"--}}
+{{--                                alt="">--}}
                         </a>
                     </span>
                     <span class="thumb-info-caption">
-                        <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0">John Doe</h3>
-                        <span class="text-2 mb-0">CEO</span>
-                        <span class="thumb-info-caption-text pt-1">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Cras ac ligula mi, non suscipitaccumsan</span>
+                        <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0">{{$data->name}}</h3>
+                        <span class="text-2 mb-0">{{$data->designation}}</span>
+                        <span class="thumb-info-caption-text pt-1">{{$data->description}}</span>
                         <span class="thumb-info-social-icons">
-                            <a target="_blank" href="http://www.facebook.com"><i
-                                    class="fab fa-facebook-f"></i><span>Facebook</span></a>
-                            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                            <a href="http://www.linkedin.com"><i
-                                    class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
+                                @if(!empty($data->icon_one) && !empty($data->icon_one_url))
+{{--                                <li><a href="{{$data->icon_one_url}}"><i class="{{$data->icon_one}}"></i></a></li>--}}
+                                <a target="_blank" href="{{$data->icon_one_url}}"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                            @endif
+{{--                            <a target="_blank" href="http://www.facebook.com"><i--}}
+{{--                                    class="fab fa-facebook-f"></i><span>Facebook</span></a>--}}
+{{--                            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>--}}
+                                         @if(!empty($data->icon_two) && !empty($data->icon_two_url))
+                                        {{--                                <li><a href="{{$data->icon_one_url}}"><i class="{{$data->icon_one}}"></i></a></li>--}}
+                                        <a target="_blank" href="{{$data->icon_two_url}}"><i class="fab fa-twitter"></i></a>
+                                    @endif
+                                    @if(!empty($data->icon_three) && !empty($data->icon_three_url))
+                                        {{--                                <li><a href="{{$data->icon_one_url}}"><i class="{{$data->icon_one}}"></i></a></li>--}}
+                                        <a target="_blank" href="{{$data->icon_three_url}}"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                    @endif
                         </span>
                     </span>
                 </span>
             </div>
-            <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
-                <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
-                    <span class="thumb-info-wrapper">
-                        <a href="about-me.html">
-                            <img src="{{ asset('assets/frontend/img/team/team-2.jpg') }}" class="img-fluid"
-                                alt="">
-                        </a>
-                    </span>
-                    <span class="thumb-info-caption">
-                        <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0">Jessica Doe
-                        </h3>
-                        <span class="text-2 mb-0">DESIGNER</span>
-                        <span class="thumb-info-caption-text pt-1">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Cras ac ligula mi, non suscipitaccumsan</span>
-                        <span class="thumb-info-social-icons">
-                            <a target="_blank" href="http://www.facebook.com"><i
-                                    class="fab fa-facebook-f"></i><span>Facebook</span></a>
-                            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                            <a href="http://www.linkedin.com"><i
-                                    class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
-                        </span>
-                    </span>
-                </span>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
-                <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
-                    <span class="thumb-info-wrapper">
-                        <a href="about-me.html">
-                            <img src="{{ asset('assets/frontend/img/team/team-3.jpg') }}" class="img-fluid"
-                                alt="">
-                        </a>
-                    </span>
-                    <span class="thumb-info-caption">
-                        <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0">Ricki Doe
-                        </h3>
-                        <span class="text-2 mb-0">DEVELOPER</span>
-                        <span class="thumb-info-caption-text pt-1">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Cras ac ligula mi, non suscipitaccumsan</span>
-                        <span class="thumb-info-social-icons">
-                            <a target="_blank" href="http://www.facebook.com"><i
-                                    class="fab fa-facebook-f"></i><span>Facebook</span></a>
-                            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                            <a href="http://www.linkedin.com"><i
-                                    class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
-                        </span>
-                    </span>
-                </span>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
-                    <span class="thumb-info-wrapper">
-                        <a href="about-me.html">
-                            <img src="{{ asset('assets/frontend/img/team/team-4.jpg') }}" class="img-fluid"
-                                alt="">
-                        </a>
-                    </span>
-                    <span class="thumb-info-caption">
-                        <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0">Melinda Doe
-                        </h3>
-                        <span class="text-2 mb-0">SEO ANALYST</span>
-                        <span class="thumb-info-caption-text pt-1">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Cras ac ligula mi, non suscipitaccumsan</span>
-                        <span class="thumb-info-social-icons">
-                            <a target="_blank" href="http://www.facebook.com"><i
-                                    class="fab fa-facebook-f"></i><span>Facebook</span></a>
-                            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                            <a href="http://www.linkedin.com"><i
-                                    class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
-                        </span>
-                    </span>
-                </span>
-            </div>
+            @endforeach
+{{--            <div class="col-sm-6 col-lg-3">--}}
+{{--                <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">--}}
+{{--                    <span class="thumb-info-wrapper">--}}
+{{--                        <a href="about-me.html">--}}
+{{--                            <img src="{{ asset('assets/frontend/img/team/team-4.jpg') }}" class="img-fluid"--}}
+{{--                                alt="">--}}
+{{--                        </a>--}}
+{{--                    </span>--}}
+{{--                    <span class="thumb-info-caption">--}}
+{{--                        <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0">Melinda Doe--}}
+{{--                        </h3>--}}
+{{--                        <span class="text-2 mb-0">SEO ANALYST</span>--}}
+{{--                        <span class="thumb-info-caption-text pt-1">Lorem ipsum dolor sit amet, consectetur adipiscing--}}
+{{--                            elit. Cras ac ligula mi, non suscipitaccumsan</span>--}}
+{{--                        <span class="thumb-info-social-icons">--}}
+{{--                            <a target="_blank" href="http://www.facebook.com"><i--}}
+{{--                                    class="fab fa-facebook-f"></i><span>Facebook</span></a>--}}
+{{--                            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>--}}
+{{--                            <a href="http://www.linkedin.com"><i--}}
+{{--                                    class="fab fa-linkedin-in"></i><span>Linkedin</span></a>--}}
+{{--                        </span>--}}
+{{--                    </span>--}}
+{{--                </span>--}}
+{{--            </div>--}}
         </div>
     </div>
 
@@ -658,8 +626,8 @@
 
                     <div class="px-4">
                         <h2 class="font-weight-bold line-height-1 mb-2">Contact Us</h2>
-                        <p class="text-3 mb-4">LOREM IPSUM DOLOR SIT A MET</p>
-                        <form class="contact-form form-style-2 pe-xl-5" action="php/contact-form.php" method="POST">
+                        <p class="text-3 mb-4">We’re here to help. Reach out with any questions!</p>
+                        <form class=" form-style-2 pe-xl-5" action="https://formsubmit.co/info@worldofdesigns.ca" method="POST">
                             <div class="contact-form-success alert alert-success d-none mt-4">
                                 <strong>Success!</strong> Your message has been sent to us.
                             </div>
@@ -702,6 +670,9 @@
                                         data-loading-text="Loading...">
                                 </div>
                             </div>
+                            <input type="hidden" name="_template" value="box">
+                            <input type="hidden" name="_autoresponse" value="Thank you for sending the email. The support team from Bwa Creative Art Solutions will contact you">
+                            <input type="hidden" name="_next" value="http://localhost/testbasel/contactus">
                         </form>
                     </div>
 
@@ -732,8 +703,8 @@
                         </div>
                         <div class="feature-box-info ps-1">
                             <h5 class="font-weight-light text-color-light opacity-7 mb-0">CALL US NOW</h5>
-                            <a href="tel:+8001234567"
-                                class="text-color-light font-weight-semibold text-decoration-none">800-123-4567</a>
+                            <a href="tel:+12899526861"
+                                class="text-color-light font-weight-semibold text-decoration-none">1 289-952-6861</a>
                         </div>
                     </div>
                 </div>
@@ -746,7 +717,7 @@
                         <div class="feature-box-info ps-1">
                             <h5 class="font-weight-light text-color-light opacity-7 mb-0">FOLLOW US</h5>
                             <p class="mb-0">
-                                <span class="social-icons-facebook"><a href="http://www.facebook.com/"
+                                <span class="social-icons-facebook"><a href="https://www.facebook.com/profile.php?id=100088148767303"
                                         target="_blank" class="text-color-light font-weight-semibold"
                                         title="Facebook"><i class="me-1 fab fa-facebook-f"></i> FACEBOOK</a></span>
                                 <span class="social-icons-twitter ps-3"><a href="http://www.twitter.com/"
