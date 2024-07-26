@@ -1,6 +1,4 @@
-
-@extends('frontend.frontend-page-master')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div role="main" class="main">
 
     <section class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-7" style="background-image: url(img/page-header/page-header-background-transparent-2.jpg);">
@@ -11,7 +9,7 @@
                 </div>
                 <div class="col-md-12 align-self-center order-1">
                     <ul class="breadcrumb breadcrumb-light d-block text-center">
-                        <li><a href="{{route('homepage')}}">Home</a></li>
+                        <li><a href="<?php echo e(route('homepage')); ?>">Home</a></li>
                         <li class="active">Pages</li>
                     </ul>
                 </div>
@@ -62,7 +60,7 @@
                                 scrolling="no"
                                 marginheight="0"
                                 marginwidth="0"
-                                src="https://maps.google.com/maps?q={{get_static_option('contact_page_map_section_latitude')}},{{get_static_option('contact_page_map_section_longitude')}}&hl=en-US&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                                src="https://maps.google.com/maps?q=<?php echo e(get_static_option('contact_page_map_section_latitude')); ?>,<?php echo e(get_static_option('contact_page_map_section_longitude')); ?>&hl=en-US&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                         </iframe>
 
                     </div>
@@ -185,7 +183,7 @@
                 <h2 class="text-color-dark font-weight-bold text-9 text-lg-end pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="600">Request Consultation</h2>
 
                 <form class="custom-form-style-1 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="800" action="https://formsubmit.co/info@worldofdesigns.ca" method="POST">
-                    @csrf
+                    <?php echo csrf_field(); ?>
                     <input type="hidden" name="_template" value="box">
                     <input type="hidden" name="_autoresponse" value="Thank you for sending the email. The support team from Bwa Creative Art Solutions will contact you">
                     <input type="hidden" name="_next" value="https://worldofdesigns.ca/contactus">
@@ -247,4 +245,5 @@
         </div>
     </section>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('frontend.frontend-page-master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\testbasel\testbasel\pr\resources\views/frontend/contactus.blade.php ENDPATH**/ ?>
