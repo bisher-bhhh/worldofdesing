@@ -19,7 +19,7 @@
                                 <div class="owl-item position-relative  overlay overlay-show overlay-op-8"
                                      style="background-size: cover; background-position: center; background-color: #35383d;">
                                 <video autoplay muted loop class="position-absolute w-100 h-100" style="object-fit: cover;">
-                                    <source src="{{ asset('assets/frontend/img/Martin Heck-la-palma-time-lapses-and-scenics-687814-filmsupply.mp4') }}" type="video/mp4">
+                                    <source src="{{ asset('assets/frontend/img/moza_20230518_202725 (1).mp4') }}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             @else
@@ -495,7 +495,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <h2 class="font-weight-bold text-color-light mb-2">Our Satisfied Customers</h2>
+                    <h2 class="font-weight-bold text-color-light mb-2">Testimonials</h2>
                     <p class="text-color-light opacity-7">See how our solutions have elevated their projects and transformed their visions</p>
                 </div>
             </div>

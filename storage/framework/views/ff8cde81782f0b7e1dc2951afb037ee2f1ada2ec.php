@@ -1,5 +1,4 @@
-@extends('frontend.frontend-page-master')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <body data-plugin-page-transition>
 <div class="body">
 
@@ -12,7 +11,7 @@
                     </div>
                     <div class="col-md-12 align-self-center order-1">
                         <ul class="breadcrumb breadcrumb-light d-block text-center">
-                            <li><a href="{{route('homepage')}}">Home</a></li>
+                            <li><a href="<?php echo e(route('homepage')); ?>">Home</a></li>
                             <li class="active">Pages</li>
                         </ul>
                     </div>
@@ -21,17 +20,17 @@
         </section>
 
         <div class="container py-4">
-            @foreach($all_team_members as $data)
+            <?php $__currentLoopData = $all_team_members; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="row">
                 <div class="col-md-7 order-2">
                     <div class="overflow-hidden">
-                        <h2 class="text-color-dark font-weight-bold text-8 mb-0 pt-0 mt-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">{{$data->name}}</h2>
+                        <h2 class="text-color-dark font-weight-bold text-8 mb-0 pt-0 mt-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300"><?php echo e($data->name); ?></h2>
                     </div>
                     <div class="overflow-hidden mb-3">
-                        <p class="font-weight-bold text-primary text-uppercase mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="500">{{$data->designation}}</p>
+                        <p class="font-weight-bold text-primary text-uppercase mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="500"><?php echo e($data->designation); ?></p>
                     </div>
-                    <p class="lead appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">{{$data->description}}</p>
-{{--                    <p class="pb-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">I am Engineer Basel, founder of World of Design. Our company is dedicated to creating bespoke spaces that transform your home into a true reflection of your dreams and design preferences.</p>--}}
+                    <p class="lead appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700"><?php echo e($data->description); ?></p>
+
                     <hr class="solid my-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900">
                     <div class="row align-items-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000">
                         <div class="col-lg-6">
@@ -41,19 +40,19 @@
                         <div class="col-sm-6 text-lg-end my-4 my-lg-0">
                             <strong class="text-uppercase text-1 me-3 text-dark">follow me</strong>
                             <ul class="social-icons float-lg-end">
-                                <li class="social-icons-facebook"><a href="{{$data->icon_one_url}}" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="social-icons-twitter"><a href="{{$data->icon_two_url}}" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                                <li class="social-icons-linkedin"><a href="{{$data->icon_three_url}}" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li class="social-icons-facebook"><a href="<?php echo e($data->icon_one_url); ?>" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="social-icons-twitter"><a href="<?php echo e($data->icon_two_url); ?>" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                <li class="social-icons-linkedin"><a href="<?php echo e($data->icon_three_url); ?>" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-5 order-md-2 mb-4 mb-lg-0 appear-animation" data-appear-animation="fadeInRightShorter">
-                    @if(file_exists('assets/uploads/team-member/team-member-grid-'.$data->id.'.'.$data->image))
-                        <img src="{{asset('assets/frontend/img/a68c6225-d2f8-497a-ab4c-070dc9f13a46.jpg')}}" alt="{{__($data->name)}}" class="img-fluid"
+                    <?php if(file_exists('assets/uploads/team-member/team-member-grid-'.$data->id.'.'.$data->image)): ?>
+                        <img src="<?php echo e(asset('assets/frontend/img/a68c6225-d2f8-497a-ab4c-070dc9f13a46.jpg')); ?>" alt="<?php echo e(__($data->name)); ?>" class="img-fluid"
                         >
-                    @endif
-{{--                    <img src="img/team/team-1.jpg" class="img-fluid" alt="">--}}
+                    <?php endif; ?>
+
                 </div>
             </div>
 
@@ -63,7 +62,7 @@
                 </div>
             </div>
 
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
         </div>
 
@@ -78,7 +77,7 @@
                     </div>
                     <div class="col-md-3 col-lg-3">
                         <div class="call-to-action-btn">
-                            <a href="{{route('frontend.contactus')}}" target="_blank" class="btn btn-dark btn-lg text-3 font-weight-semibold px-4 py-3">Get Started Now</a><span class="arrow hlb d-none d-md-block" data-appear-animation="rotateInUpLeft" style="top: -40px; left: 70%;"></span>
+                            <a href="<?php echo e(route('frontend.contactus')); ?>" target="_blank" class="btn btn-dark btn-lg text-3 font-weight-semibold px-4 py-3">Get Started Now</a><span class="arrow hlb d-none d-md-block" data-appear-animation="rotateInUpLeft" style="top: -40px; left: 70%;"></span>
                         </div>
                     </div>
                 </div>
@@ -90,4 +89,6 @@
 
 </div>
 </body>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontend.frontend-page-master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\testbasel\testbasel\pr\resources\views/frontend/clients.blade.php ENDPATH**/ ?>
