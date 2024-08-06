@@ -233,7 +233,7 @@
                     </div>
                     <div class="overflow-hidden mb-4">
                         <h2 class="text-color-light font-weight-bold mb-0 appear-animation"
-                            data-appear-animation="maskUp" data-appear-animation-delay="250">Our Services</h2>
+                            data-appear-animation="maskUp" data-appear-animation-delay="250">Our Servicesdd</h2>
                     </div>
                 </div>
             </div>
