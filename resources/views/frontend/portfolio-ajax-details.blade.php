@@ -84,18 +84,18 @@
 					<div class="col">
 						<div class="featured-box">
 							<div class="box-content p-0 border-0">
-								@if($service_item->id==25)
-									<img height="87px" src="{{asset('assets/frontend/img/building.png')}}">
+								@if($data->id==25)
+									<img height="87px" src="{{asset('assets/frontend/img/thumbs-up.png')}}">
 								@endif
-								@if($service_item->id==26)
-									<img height="87px" src="{{asset('assets/frontend/img/sketch.png')}}">
+								@if($data->id==26)
+									<img height="87px" src="{{asset('assets/frontend/img/briefcase.png')}}">
 								@endif
-								@if($service_item->id==27)
-									<img height="87px" src="{{asset('assets/frontend/img/save-forest.png')}}">
+								@if($data->id==27)
+									<img height="87px" src="{{asset('assets/frontend/img/calculator.png')}}">
 								@endif
-								@if($service_item->id==28)
+								@if($data->id==28)
 									<img height="87px" src="{{asset('assets/frontend/img/staircase.png')}}">
-								@endif							</div>
+								@endif					</div>
 						</div>
 					</div>
 				</div>
