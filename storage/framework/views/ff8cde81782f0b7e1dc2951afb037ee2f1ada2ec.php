@@ -65,35 +65,25 @@
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
         </div>
-        <div class="col-md-8 ps-md-5">
-            <h2 class="font-weight-normal text-6 mb-3"><strong class="font-weight-extra-bold">Innovative</strong> Design Solutions</h2>
-            <p class="text-4"> World of Designs is a Burlington-based renovation and remodeling company with over a decade of
-                expertise in transforming commercial and residential spaces across Ontario. They offer a wide range of
-                services, including bathroom and kitchen remodeling, home improvement, drywall installation, flooring,
-                deck building, painting, interior and exterior design, building construction, and landscaping. Their home
-                renovation services enhance the functionality and beauty of living spaces, while their commercial design
-                solutions improve the aesthetic and operational aspects of business environments.
-                Clients have experienced transformative changes, such as modernizing outdated kitchens into stylish,
-                functional spaces with increased storage, and converting living rooms into cozy, modern areas with
-                expert drywall work and beautiful new flooring. World of Designs is known for its client-focused
-                approach, offering affordable pricing, igniting creativity, and delivering exceptional results within the
-                expected timeframe. Personalized consultations are provided to understand the client’s vision and
-                preferences, then expertise is applied to design and implement transformative landscapes that captivate
-                and inspire.
-                This company also offers home design, building, and development. Comprehensive solutions are
-                provided to turn clients’ visions into reality, from initial planning to final delivery. Services include home
-                design according to the latest trends and engineering standards, home building with high-quality
-                materials, and home development with modern specifications that meet clients’ aspirations. The
-                company also excels in framing services, ensuring durability and sustainability for each project.
-                Basel, the company’s lead designer, provides clients with tailored solutions that meet their needs and
-                desires, making World of Designs a trusted partner for any renovation or remodeling project. The team’s
-                industry connections and knowledge ensure seamless project execution, using high-quality materials
-                and maintaining a clean, respectful work environment, even when clients are present during
-                renovations. Recognized for its excellence, World of Designs won the Landscape Architectural Design
-                Competition in 2021, highlighting their commitment to innovation and quality. With a reputation built
-                on trust and excellence, World of Designs continues to inspire and deliver remarkable results, turning
-                client visions into reality with precision and care. </p>
-            <p>Our team’s expertise spans residential, commercial, and industrial sectors, ensuring each project is executed with the utmost professionalism and attention to detail. Partner with us to turn your vision into reality, leveraging our commitment to excellence for outstanding results.</p>
+        <div class="col ps-md-5">
+            <h2 class="font-weight-bolder text-6 mb-3">
+                <strong class="font-weight-extra-bold">About</strong> World of Design
+            </h2>
+            <p class="text-4">
+                <span class="alternative-font">World of Design</span> is a Burlington-based renovation and remodeling company with over a decade of expertise in transforming commercial and residential spaces across Ontario. They offer a wide range of services, including bathroom and kitchen remodeling, home improvement, drywall installation, flooring, deck building, painting, interior and exterior design, building construction, and landscaping. Their home renovation services enhance the functionality and beauty of living spaces, while their commercial design solutions improve the aesthetic and operational aspects of business environments.
+            </p>
+            <p class="text-4">
+                Clients have experienced transformative changes, such as modernizing outdated kitchens into stylish, functional spaces with increased storage, and converting living rooms into cozy, modern areas with expert drywall work and beautiful new flooring. World of Designs is known for its client-focused approach, offering affordable pricing, igniting creativity, and delivering exceptional results within the expected timeframe. Personalized consultations are provided to understand the client’s vision and preferences, then expertise is applied to design and implement transformative landscapes that captivate and inspire.
+            </p>
+            <p class="text-4">
+                This company also offers home design, building, and development. Comprehensive solutions are provided to turn clients’ visions into reality, from initial planning to final delivery. Services include home design according to the latest trends and engineering standards, home building with high-quality materials, and home development with modern specifications that meet clients’ aspirations. The company also excels in framing services, ensuring durability and sustainability for each project.
+            </p>
+            <p class="text-4">
+                Basel, the company’s lead designer, provides clients with tailored solutions that meet their needs and desires, making World of Designs a trusted partner for any renovation or remodeling project. The team’s industry connections and knowledge ensure seamless project execution, using high-quality materials and maintaining a clean, respectful work environment, even when clients are present during renovations. Recognized for its excellence, World of Designs won the Landscape Architectural Design Competition in 2021, highlighting their commitment to innovation and quality. With a reputation built on trust and excellence, World of Designs continues to inspire and deliver remarkable results, turning client visions into reality with precision and care.
+            </p>
+            <p class="text-4">
+                Our team’s expertise spans residential, commercial, and industrial sectors, ensuring each project is executed with the utmost professionalism and attention to detail. Partner with us to turn your vision into reality, leveraging our commitment to excellence for outstanding results.
+            </p>
         </div>
         <section class="call-to-action call-to-action-default with-button-arrow content-align-center call-to-action-in-footer call-to-action-in-footer-margin-top">
             <div class="container">
