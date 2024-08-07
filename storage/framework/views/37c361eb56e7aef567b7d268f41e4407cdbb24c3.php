@@ -55,8 +55,8 @@
                         <div class="featured-box featured-box-effect-4">
                             <div class="box-content">
                                 <i class=" icon-featured icon-home icons text-color-primary bg-color-grey"></i>
-                                <h4 class="font-weight-bold">Architectural Design</h4>
-                                <p class="px-3">Transforming visions into stunning realities. Our designs are tailored to your unique needs, blending functionality with aesthetic appeal.</p>
+                                <h4 class="font-weight-bold"> Home Improvement</h4>
+                                <p class="px-3">Transform your space with our tailored solutions, delivering quality craftsmanship and exceptional results.</p>
                             </div>
                         </div>
                     </div>

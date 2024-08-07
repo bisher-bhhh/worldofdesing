@@ -36,7 +36,7 @@
                     <div class="row align-items-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000">
                         <div class="col-lg-6">
                             <a href="#" class="btn btn-modern btn-dark mt-3">Get In Touch</a>
-                            <a href="#" class="btn btn-modern btn-primary mt-3">Hire Me</a>
+                            <a href="{{route('frontend.allprojects')}}" class="btn btn-modern btn-primary mt-3">view projects</a>
                         </div>
                         <div class="col-sm-6 text-lg-end my-4 my-lg-0">
                             <strong class="text-uppercase text-1 me-3 text-dark">follow me</strong>

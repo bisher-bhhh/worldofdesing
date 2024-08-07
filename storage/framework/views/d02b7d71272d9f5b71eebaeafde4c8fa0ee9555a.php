@@ -235,28 +235,28 @@
                     </div>
                     <div class="overflow-hidden mb-4">
                         <h2 class="text-color-light font-weight-bold mb-0 appear-animation"
-                            data-appear-animation="maskUp" data-appear-animation-delay="250">Our Servicesdd</h2>
+                            data-appear-animation="maskUp" data-appear-animation-delay="250">Our Services</h2>
                     </div>
                 </div>
             </div>
 
-            <div class="featured-boxes featured-boxes-style-4 custom-featured-boxes-style-1">
+            <div class="featured-boxes featured-boxes-style-4 custom-featured-boxes-style-1" style="height: 500px;overflow: hidden;">
                 <div class="row mb-2">
                     <?php $__currentLoopData = $all_service; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index=>$data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="col-md-6 col-xl-3">
+                        <div class="col-md-8 col-xl-3 ">
                             <a href="<?php echo e(route('frontend.servicedetails', ['id' => $data->id])); ?>"
                                 class="text-decoration-none simple-ajax-popup">
                                 <div class="featured-box featured-box-primary featured-box-effect-5 appear-animation"
                                     data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                                     <div class="box-content">
                                         <?php if($data->id==25): ?>
-                                            <img height="87px" src="<?php echo e(asset('assets/frontend/img/building.png')); ?>">
+                                            <img height="87px" src="<?php echo e(asset('assets/frontend/img/thumbs-up.png')); ?>">
                                         <?php endif; ?>
                                             <?php if($data->id==26): ?>
-                                                <img height="87px" src="<?php echo e(asset('assets/frontend/img/sketch.png')); ?>">
+                                                <img height="87px" src="<?php echo e(asset('assets/frontend/img/briefcase.png')); ?>">
                                             <?php endif; ?>
                                             <?php if($data->id==27): ?>
-                                                <img height="87px" src="<?php echo e(asset('assets/frontend/img/save-forest.png')); ?>">
+                                                <img height="87px" src="<?php echo e(asset('assets/frontend/img/calculator.png')); ?>">
                                             <?php endif; ?>
                                             <?php if($data->id==28): ?>
                                                 <img height="87px" src="<?php echo e(asset('assets/frontend/img/staircase.png')); ?>">
@@ -558,7 +558,7 @@
                     <span class="thumb-info-caption">
                         <h3 class="font-weight-extra-bold text-color-dark text-4 line-height-1 mt-3 mb-0"><?php echo e($data->name); ?></h3>
                         <span class="text-2 mb-0"><?php echo e($data->designation); ?></span>
-                        <span class="thumb-info-caption-text pt-1"><?php echo e($data->description); ?></span>
+                        <span class="thumb-info-caption-text pt-1" style="display: block; white-space: nowrap;line-height: 1.5;overflow: hidden;text-overflow: ellipsis;"><?php echo e($data->description); ?></span>
                         <span class="thumb-info-social-icons">
                                 <?php if(!empty($data->icon_one) && !empty($data->icon_one_url)): ?>
 
