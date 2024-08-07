@@ -238,7 +238,7 @@
                 </div>
             </div>
 
-            <div class="featured-boxes featured-boxes-style-4 custom-featured-boxes-style-1" style="height: 500px;overflow: hidden;">
+            <div class="featured-boxes featured-boxes-style-4 custom-featured-boxes-style-1" >
                 <div class="row mb-2">
                     @foreach ($all_service as $index=>$data)
                         <div class="col-md-8 col-xl-3 ">
