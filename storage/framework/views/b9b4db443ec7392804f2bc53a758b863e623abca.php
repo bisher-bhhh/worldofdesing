@@ -11,11 +11,11 @@
     </div>
 </footer>
 
-<div class="preloader" id="preloader">
-    <div class="preloader-inner">
-        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-    </div>
-</div>
+
+
+
+
+
 
 
 <!-- Vendor -->
