@@ -86,17 +86,19 @@
 						<div class="featured-box">
 							<div class="box-content p-0 border-0">
 								<?php if($service_item->id==25): ?>
-									<img height="87px" src="<?php echo e(asset('assets/frontend/img/building.png')); ?>">
+									<img height="87px" src="<?php echo e(asset('assets/frontend/img/thumbs-up.png')); ?>">
 								<?php endif; ?>
 								<?php if($service_item->id==26): ?>
-									<img height="87px" src="<?php echo e(asset('assets/frontend/img/sketch.png')); ?>">
+									<img height="87px" src="<?php echo e(asset('assets/frontend/img/briefcase.png')); ?>">
 								<?php endif; ?>
 								<?php if($service_item->id==27): ?>
-									<img height="87px" src="<?php echo e(asset('assets/frontend/img/save-forest.png')); ?>">
+									<img height="87px" src="<?php echo e(asset('assets/frontend/img/calculator.png')); ?>">
 								<?php endif; ?>
 								<?php if($service_item->id==28): ?>
 									<img height="87px" src="<?php echo e(asset('assets/frontend/img/staircase.png')); ?>">
-								<?php endif; ?>							</div>
+								<?php endif; ?>
+
+							</div>
 						</div>
 					</div>
 				</div>
