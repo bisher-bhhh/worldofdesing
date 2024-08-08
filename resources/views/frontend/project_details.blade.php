@@ -1,5 +1,5 @@
 @extends('frontend.frontend-page-master')
-@extends('frontend.frontend-page-master')
+
 @php $img_url = '';@endphp
 @if(file_exists('assets/uploads/works/work-grid-'.$work->id.'.'.$work->image))
     @php $img_url = asset('assets/uploads/works/work-large-'.$work->id.'.'.$work->image); @endphp
