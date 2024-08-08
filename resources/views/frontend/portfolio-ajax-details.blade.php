@@ -95,7 +95,9 @@
 								@endif
 								@if($data->id==28)
 									<img height="87px" src="{{asset('assets/frontend/img/staircase.png')}}">
-								@endif					</div>
+								@endif
+
+							</div>
 						</div>
 					</div>
 				</div>
