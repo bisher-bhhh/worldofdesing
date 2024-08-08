@@ -27,11 +27,11 @@
                             <h2 class="font-weight-bold text-6 text-lg-5 text-xl-7 pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" style="color: #f6941c;">Get In Touch</h2>
                             <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">
                                 <h3 class="alternative-font-4 font-weight-bold text-color-dark text-transform-none text-4 mb-0">Work Inquiries</h3>
-                                <a href="tel:+12899526861" class="d-inline-block text-color-default text-color-hover-primary text-decoration-none mb-4">+1 289-952-6861</a>
+                                <a href="tel:+15199983406" class="d-inline-block text-color-default text-color-hover-primary text-decoration-none mb-4">(+1) 519-998-3406</a>
                             </div>
                             <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">
                                 <h3 class="alternative-font-4 font-weight-bold text-color-dark text-transform-none text-4 mb-0">Careers & Press</h3>
-                                <a href="tel:+12899526861" class="d-inline-block text-color-default text-color-hover-primary text-decoration-none mb-4">+1 289-952-6861</a>
+                                <a href="tel:+15199983406" class="d-inline-block text-color-default text-color-hover-primary text-decoration-none mb-4">(+1) 519-998-3406</a>
                             </div>
                             <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900">
                                 <h3 class="alternative-font-4 font-weight-bold text-color-dark text-transform-none text-4 mb-0">Assistance Hours</h3>
