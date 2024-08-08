@@ -110,7 +110,7 @@
 			<p>Reach out to us for a consultation and let’s explore how we can bring your project to life. From initial concept to final execution, we are committed to delivering excellence at every stage.</p>
 
 			<p class="mb-0"><span class="text-color-light text-4 mb-3">CALL US NOW</span></p>
-			<p class="mb-3"><a href="tel:+12899526861" class="text-decoration-none text-color-primary font-weight-bold line-height-2 text-6 opacity-10">(+1) 519-998-3406</a></p>
+			<p class="mb-3"><a href="tel:+15199983406" class="text-decoration-none text-color-primary font-weight-bold line-height-2 text-6 opacity-10">(+1) 519-998-3406</a></p>
 		</div>
 	</div>
 </div>
