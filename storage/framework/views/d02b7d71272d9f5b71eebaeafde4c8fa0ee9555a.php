@@ -706,8 +706,8 @@
                         </div>
                         <div class="feature-box-info ps-1">
                             <h5 class="font-weight-light text-color-light opacity-7 mb-0">CALL US NOW</h5>
-                            <a href="tel:+12899526861"
-                                class="text-color-light font-weight-semibold text-decoration-none">1 289-952-6861</a>
+                            <a href="tel:+1 519-998-3406"
+                                class="text-color-light font-weight-semibold text-decoration-none">+1 519-998-3406</a>
                         </div>
                     </div>
                 </div>
