@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row mt-5">
                     <div class="col-md-12 align-self-center p-static order-2 text-center">
-                        <h1 class="text-12 font-weight-semibold">Meet our Team</h1>
+                        <h1 class="text-12 font-weight-semibold">About Us</h1>
                     </div>
                     <div class="col-md-12 align-self-center order-1">
                         <ul class="breadcrumb breadcrumb-light d-block text-center">

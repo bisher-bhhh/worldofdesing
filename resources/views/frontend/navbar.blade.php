@@ -44,7 +44,7 @@
                                             </li>
                                             <li>
                                                 <a class="nav-link" data-hash data-hash-offset="0"
-                                                   data-hash-offset-lg="68" href="{{route('frontend.ourTeam')}}">Meet the Team</a>
+                                                   data-hash-offset-lg="68" href="{{route('frontend.ourTeam')}}">About Us</a>
                                             </li>
 {{--                                            <li>--}}
 {{--                                                <a class="nav-link" data-hash data-hash-offset="0"--}}

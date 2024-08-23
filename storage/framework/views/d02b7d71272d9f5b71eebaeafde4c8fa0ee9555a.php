@@ -18,8 +18,8 @@
                             <?php elseif($index==2): ?>
                                 <div class="owl-item position-relative  overlay overlay-show overlay-op-8"
                                      style="background-size: cover; background-position: center; background-color: #35383d;">
-                                <video autoplay muted loop class="position-absolute w-100 h-100" style="object-fit: cover;">
-                                    <source src="<?php echo e(asset('assets/frontend/img/moza_20230518_202725 (1).mp4')); ?>" type="video/mp4">
+                                <video autoplay muted loop class="position-absolute w-100 h-100"width="640" height="360" style="object-fit: cover;">
+                                    <source src="<?php echo e(asset('assets/frontend/img/moza_20230518_202725 (1).mp4')); ?>" type="video/mp4" >
                                     Your browser does not support the video tag.
                                 </video>
                             <?php else: ?>
