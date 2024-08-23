@@ -2,9 +2,9 @@
     <div class="footer-copyright">
         <div class="container py-2">
             <div class="row py-4">
-                <div class="col d-flex align-items-center justify-content-center">
-                    <p><strong>world of designs</strong> - © Copyright 2024. All Rights Reserved </p>| Powered by
-                    <a href="https://bichrbraighle.worldofdesigns.ca/" style="color: #f6941c">  &nbsp;BH</a>
+                <div class="col d-flex align-items-center justify-content-center text-center">
+                    <p><strong>world of designs</strong> - © Copyright 2024. All Rights Reserved | Powered by <a href="https://bichrbraighle.worldofdesigns.ca/" style="color: #f6941c">  &nbsp;BH</a> </p>
+
                 </div>
             </div>
         </div>
