@@ -40,10 +40,10 @@
                         </div>
                         <div class="col-md-6">
                             <h2 class="font-weight-bold  text-6 text-lg-5 text-xl-7 pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1100" style="color: #f6941c;">
-                                Address and Mail
+                                Address and E-mail
                             </h2>                            <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1300">
                                 <h3 class="alternative-font-4 font-weight-bold text-color-dark text-transform-none text-4 mb-0">Address</h3>
-                                <p>4400 Millcroft Park drive,<br>Burlington, ON,  <br>Canada, Ontario</p>
+                                <p>118 Marigold Grds,<br>Oakville,  <br>ON,Canada.</p>
                             </div>
                             <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1500">
                                 <h3 class="alternative-font-4 font-weight-bold text-color-dark text-transform-none text-4 mb-0">Email</h3>
