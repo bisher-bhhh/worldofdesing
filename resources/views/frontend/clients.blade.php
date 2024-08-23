@@ -66,7 +66,7 @@
             @endforeach
 
         </div>
-        <div class="col ps-md-5">
+        <div class="col ps-md-5 p-3">
             <h2 class="font-weight-bolder text-6 mb-3">
                 <strong class="font-weight-extra-bold">About</strong> World of Design
             </h2>
