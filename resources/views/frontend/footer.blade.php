@@ -35,15 +35,15 @@
 <script src="{{asset('assets/frontend/vendor/vide/jquery.vide.min.js')}}"></script>
 <script src="{{asset('assets/frontend/vendor/vivus/vivus.min.js')}}"></script>
 <script src="{{asset('assets/frontend/vendor/jquery.gmap/jquery.gmap.min.js')}}"></script>
-<!-- Theme Base, Components and Settings -->
+<!--  Base, Components and Settings -->
 <script src="{{asset('assets/frontend/js/theme.js')}}"></script>
 
 <script src="{{asset('assets/frontend/js/views/view.contact.js')}}"></script>
 
-<!-- Theme Custom -->
+<!--  Custom -->
 <script src="{{asset('assets/frontend/js/custom.js')}}"></script>
 
-<!-- Theme Initialization Files -->
+<!--  Initialization Files -->
 <script src="{{asset('assets/frontend/js/theme.init.js')}}"></script>
 
 <!-- Examples -->
