@@ -22,11 +22,11 @@
 					<div class="col-lg-9 text-center">
 						<div class="appear-animation" data-appear-animation="fadeInUpShorter">
 							<h2 class="font-weight-bold mb-2">Projects</h2>
-							<p class="mb-4">Our projects showcase top-tier architectural excellence<br>
-								Each design reflects our commitment to quality and innovation.</p>
+							<p class="mb-4">Our renovation projects highlight exceptional craftsmanship and design expertise.<br>
+								Each transformation reflects our dedication to quality and innovation.</p>
 						</div>
 						<p class="pb-3 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-							We believe in the power of great architecture to inspire and transform. With every project, we strive to push the boundaries of creativity and functionality. Explore our work and see how we turn visions into reality.</p>
+							We believe in the potential of great renovations to inspire and rejuvenate. With every project, we aim to enhance both the beauty and functionality of spaces. Explore our work and discover how we bring new life to existing structures.</p>
 
 						</p>
 					</div>
