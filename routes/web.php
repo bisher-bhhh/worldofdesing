@@ -62,13 +62,13 @@ Route::group(['middleware' => ['setlang','globalVariable']],function (){
 
 
 //admin login
-Route::get('/login/admin','Auth\LoginController@showAdminLoginForm')->name('admin.login');
+Route::get('/login/adminBaselsh','Auth\LoginController@showAdminLoginForm')->name('admin.login');
 Route::get('/login/admin/forget-password','FrontendController@showAdminForgetPasswordForm')->name('admin.forget.password');
 Route::get('/login/admin/reset-password/{user}/{token}','FrontendController@showAdminResetPasswordForm')->name('admin.reset.password');
 Route::post('/login/admin/reset-password','FrontendController@AdminResetPassword')->name('admin.reset.password.change');
 Route::post('/login/admin/forget-password','FrontendController@sendAdminForgetPasswordMail');
 Route::post('/logout/admin','AdminDashboardController@adminLogout')->name('admin.logout');
-Route::post('/login/admin','Auth\LoginController@adminLogin');
+Route::post('/login/adminBaselsh','Auth\LoginController@adminLogin');
 
 
 //admin dashboard routes
