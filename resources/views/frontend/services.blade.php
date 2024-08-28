@@ -34,7 +34,7 @@
             <div class="col-lg-10">
                 <div class="overflow-hidden">
                     <p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">
-                        At Word of Design, we specialize in creating stunning <span class="alternative-font">designs</span> that elevate your brand. Let us bring your vision to life with our expertise and creativity.
+                        At Word of Design, we specialize in creating stunning <span class="alternative-font">designs</span> followed by outstanding execution, that elevate your brand. Let us bring your vision to life with our expertise and creativity.
                     </p>
                 </div>
             </div>

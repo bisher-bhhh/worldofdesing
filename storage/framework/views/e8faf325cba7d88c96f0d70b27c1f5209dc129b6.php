@@ -26,7 +26,7 @@
 								Each transformation reflects our dedication to quality and innovation.</p>
 						</div>
 						<p class="pb-3 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-							We believe in the potential of great renovations to inspire and rejuvenate. With every project, we aim to enhance both the beauty and functionality of spaces. Explore our work and discover how we bring new life to existing structures.</p>
+							We believe in the potential of great renovations to inspire and enhance. With every project, we aim to enhance both the beauty and functionality of spaces. Explore our work and discover how we bring new life to existing structures.</p>
 
 						</p>
 					</div>
