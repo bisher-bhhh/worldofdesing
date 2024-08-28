@@ -1,5 +1,4 @@
-@extends('frontend.frontend-page-master')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div role="main" class="main">
 
 
@@ -11,7 +10,7 @@
                     </div>
                     <div class="col-md-12 align-self-center order-1">
                         <ul class="breadcrumb breadcrumb-light d-block text-center">
-                            <li><a href="{{route('homepage')}}">Home</a></li>
+                            <li><a href="<?php echo e(route('homepage')); ?>">Home</a></li>
                             <li class="active">Pages</li>
                         </ul>
                     </div>
@@ -39,7 +38,7 @@
                 </div>
             </div>
             <div class="col-lg-2 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="500">
-                <a href="{{route('frontend.contactus')}}" class="btn btn-modern btn-dark mt-1">Get a Quote!</a>
+                <a href="<?php echo e(route('frontend.contactus')); ?>" class="btn btn-modern btn-dark mt-1">Get a Quote!</a>
             </div>
         </div>
 
@@ -65,7 +64,7 @@
                         <div class="featured-box featured-box-effect-4">
                             <div class="box-content">
 
-{{--                                <img src="{{asset('assets/frontend/img/livingroom.png')}}  "   width="25px" class="icons text-color-light bg-color-primary">--}}
+
                                 <i class="icon-featured fa fa-wand-magic-sparkles text-color-light bg-color-primary"></i>
                                 <h4 class="font-weight-bold">Interior Design</h4>
                                 <p class="px-3">Creating inspiring and practical spaces. We focus on details that enhance your environment and elevate your daily experiences.</p>
@@ -121,7 +120,7 @@
 
                     <div class="row align-items-center pt-4 appear-animation" data-appear-animation="fadeInLeftShorter">
                         <div class="col-md-4 mb-4 mb-md-0">
-                            <img class="img-fluid scale-2 pe-5 pe-md-0 my-4" src="{{asset('assets/frontend/img/shutterstock_676661200.jpg')}}" alt="layout styles" />
+                            <img class="img-fluid scale-2 pe-5 pe-md-0 my-4" src="<?php echo e(asset('assets/frontend/img/shutterstock_676661200.jpg')); ?>" alt="layout styles" />
 
 
                         </div>
@@ -141,7 +140,7 @@
                             <p>From initial design to final touches, we ensure precision and efficiency at every step. With a commitment to exceeding expectations, we turn your construction vision into a standout reality. Experience excellence with every project.</p>
                         </div>
                         <div class="col-md-4 px-5 px-md-3">
-                            <img class="img-fluid scale-2 my-4" src="{{asset('assets/frontend/img/shutterstock_2193273999.jpg')}}" alt="style switcher" />
+                            <img class="img-fluid scale-2 my-4" src="<?php echo e(asset('assets/frontend/img/shutterstock_2193273999.jpg')); ?>" alt="style switcher" />
                         </div>
                     </div>
                 </div>
@@ -170,8 +169,8 @@
                         </div>
                         <div class="feature-box-info ps-1">
                             <h5 class="font-weight-light text-color-light opacity-7 mb-0">CALL US NOW</h5>
-                            <a href="tel:+15199983406"
-                               class="text-color-light font-weight-semibold text-decoration-none">(+1) 519-998-3406</a>
+                            <a href="tel:+12899526861"
+                               class="text-color-light font-weight-semibold text-decoration-none">+1 289-952-6861</a>
                         </div>
                     </div>
                 </div>
@@ -206,4 +205,5 @@
             </div>
         </div>
     </section>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('frontend.frontend-page-master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\testbasel\testbasel\pr\resources\views/frontend/services.blade.php ENDPATH**/ ?>

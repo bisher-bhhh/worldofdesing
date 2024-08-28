@@ -67,10 +67,10 @@
         </div>
         <div class="col ps-md-5 p-3">
             <h2 class="font-weight-bolder text-6 mb-3">
-                <strong class="font-weight-extra-bold">About</strong> World of Design
+                <strong class="font-weight-extra-bold">About</strong>  Word of Designs
             </h2>
             <p class="text-4">
-                <span class="alternative-font">World of Design</span> is a Burlington-based renovation and remodeling company with over a decade of expertise in transforming commercial and residential spaces across Ontario. They offer a wide range of services, including bathroom and kitchen remodeling, home improvement, drywall installation, flooring, deck building, painting, interior and exterior design, building construction, and landscaping. Their home renovation services enhance the functionality and beauty of living spaces, while their commercial design solutions improve the aesthetic and operational aspects of business environments.
+                <span class="alternative-font">Word of Designs</span> is a Burlington-based renovation and remodeling company with over a decade of expertise in transforming commercial and residential spaces across Ontario. They offer a wide range of services, including bathroom and kitchen remodeling, home improvement, drywall installation, flooring, deck building, painting, interior and exterior design, building construction, and landscaping. Their home renovation services enhance the functionality and beauty of living spaces, while their commercial design solutions improve the aesthetic and operational aspects of business environments.
             </p>
             <p class="text-4">
                 Clients have experienced transformative changes, such as modernizing outdated kitchens into stylish, functional spaces with increased storage, and converting living rooms into cozy, modern areas with expert drywall work and beautiful new flooring. World of Designs is known for its client-focused approach, offering affordable pricing, igniting creativity, and delivering exceptional results within the expected timeframe. Personalized consultations are provided to understand the client’s vision and preferences, then expertise is applied to design and implement transformative landscapes that captivate and inspire.
