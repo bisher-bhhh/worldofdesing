@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-md-5 order-md-2 mb-4 mb-lg-0 appear-animation" data-appear-animation="fadeInRightShorter">
                     @if(file_exists('assets/uploads/team-member/team-member-grid-'.$data->id.'.'.$data->image))
-                        <img src="{{asset('assets/frontend/img/a68c6225-d2f8-497a-ab4c-070dc9f13a46.jpg')}}" alt="{{__($data->name)}}" class="img-fluid"
+                        <img src="{{asset('assets/uploads/team-member/team-member-grid-'.$data->id.'.'.$data->image)}}" alt="{{__($data->name)}}" class="img-fluid"
                         >
                     @endif
 {{--                    <img src="img/team/team-1.jpg" class="img-fluid" alt="">--}}

@@ -41,7 +41,7 @@
                                          data-plugin-options="{'firstLoadNoAnim': true, 'minWindowWidth': 0}"
                                          alt="" />
                                 </span>
-                                                        Welcome to World of Design
+                                                        Welcome to World of Designs
                                                         <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
                                     <img src="{{ asset('assets/frontend/img/slides/slide-title-border.png') }}"
                                          class="w-auto appear-animation"
