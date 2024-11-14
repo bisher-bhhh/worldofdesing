@@ -33,7 +33,7 @@
             <div class="col-lg-10">
                 <div class="overflow-hidden">
                     <p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">
-                        At Word of Design, we specialize in creating stunning <span class="alternative-font">designs</span> that elevate your brand. Let us bring your vision to life with our expertise and creativity.
+                        At Word of Design, we specialize in creating stunning <span class="alternative-font">designs</span> followed by outstanding execution, that elevate your brand. Let us bring your vision to life with our expertise and creativity.
                     </p>
                 </div>
             </div>
@@ -169,8 +169,8 @@
                         </div>
                         <div class="feature-box-info ps-1">
                             <h5 class="font-weight-light text-color-light opacity-7 mb-0">CALL US NOW</h5>
-                            <a href="tel:+12899526861"
-                               class="text-color-light font-weight-semibold text-decoration-none">+1 289-952-6861</a>
+                            <a href="tel:+15199983406"
+                               class="text-color-light font-weight-semibold text-decoration-none">(+1) 519-998-3406</a>
                         </div>
                     </div>
                 </div>

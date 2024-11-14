@@ -5,7 +5,6 @@
         data-plugin-options="{'autoplayTimeout': 11000}" style="height: 100vh;">
         <div class="owl-stage-outer">
             <div class="owl-stage">
-
                 <!-- Carousel Slide 1 -->
                 @foreach ($all_header_slider as $index => $data)
                     @if ($index == 1)
@@ -237,7 +236,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="featured-boxes featured-boxes-style-4 custom-featured-boxes-style-1" >
                 <div class="row mb-2">
                     @foreach ($all_service as $index=>$data)
@@ -259,7 +257,6 @@
                                             @if($data->id==28)
                                                 <img height="87px" src="{{asset('assets/frontend/img/staircase.png')}}">
                                             @endif
-
                                         <h3 class="font-weight-bold text-color-light text-5 text-capitalize ls-0 my-3">{{$data->title}}</h3>
                                         <p class="font-weight-light text-color-light opacity-5 mb-0"> {!! $data->description !!}</p>
                                     </div>
@@ -529,7 +526,6 @@
             </div>
         </div>
     </section>
-
     <div id="team" class="container pb-4">
         <div class="row pt-5 mt-5 mb-4">
             <div class="col text-center appear-animation" data-appear-animation="fadeInUpShorter">
@@ -540,7 +536,6 @@
         <div class="row pb-5 mb-5 appear-animation" data-appear-animation="fadeInUpShorter"
             data-appear-animation-delay="200">
             @foreach($all_team_members as $data)
-
             <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                 <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
                     <span class="thumb-info-wrapper">

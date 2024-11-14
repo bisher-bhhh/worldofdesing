@@ -5,7 +5,6 @@
         data-plugin-options="{'autoplayTimeout': 11000}" style="height: 100vh;">
         <div class="owl-stage-outer">
             <div class="owl-stage">
-
                 <!-- Carousel Slide 1 -->
                 <?php $__currentLoopData = $all_header_slider; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <?php if($index == 1): ?>
@@ -41,7 +40,7 @@
                                          data-plugin-options="{'firstLoadNoAnim': true, 'minWindowWidth': 0}"
                                          alt="" />
                                 </span>
-                                                        Welcome to World of Design
+                                                        Welcome to World of Designs
                                                         <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
                                     <img src="<?php echo e(asset('assets/frontend/img/slides/slide-title-border.png')); ?>"
                                          class="w-auto appear-animation"
@@ -239,7 +238,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="featured-boxes featured-boxes-style-4 custom-featured-boxes-style-1" >
                 <div class="row mb-2">
                     <?php $__currentLoopData = $all_service; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index=>$data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -261,7 +259,6 @@
                                             <?php if($data->id==28): ?>
                                                 <img height="87px" src="<?php echo e(asset('assets/frontend/img/staircase.png')); ?>">
                                             <?php endif; ?>
-
                                         <h3 class="font-weight-bold text-color-light text-5 text-capitalize ls-0 my-3"><?php echo e($data->title); ?></h3>
                                         <p class="font-weight-light text-color-light opacity-5 mb-0"> <?php echo $data->description; ?></p>
                                     </div>
@@ -532,7 +529,6 @@
             </div>
         </div>
     </section>
-
     <div id="team" class="container pb-4">
         <div class="row pt-5 mt-5 mb-4">
             <div class="col text-center appear-animation" data-appear-animation="fadeInUpShorter">
@@ -543,7 +539,6 @@
         <div class="row pb-5 mb-5 appear-animation" data-appear-animation="fadeInUpShorter"
             data-appear-animation-delay="200">
             <?php $__currentLoopData = $all_team_members; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
             <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                 <span class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-zoom">
                     <span class="thumb-info-wrapper">

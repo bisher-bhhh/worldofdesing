@@ -24,8 +24,6 @@
 {{--@yield('content')--}}
 
 {{--@include('frontend.partials.footer')--}}
-
-
 @include('frontend.header')
 @include('frontend.navbar')
 @yield('content')

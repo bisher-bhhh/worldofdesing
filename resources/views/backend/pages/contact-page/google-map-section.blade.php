@@ -22,7 +22,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title">{{__('Google Map Section Settings')}}</h4>
-                        <p class="margin-bottom-30">{{__('Don\'t forget to put your google map api key in general setting > Third Party Scripts')}}</p>
+                        {{-- <p class="margin-bottom-30">{{__('Don\'t forget to put your google map api key in general setting > Third Party Scripts')}}</p> --}}
                         <form action="{{route('admin.contact.page.map')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">

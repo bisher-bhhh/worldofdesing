@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>world of desing</title>
-
+    <title>world of designs</title>
     <meta name="keywords" content="home renovation, interior design, custom interiors, flooring, painting"/>
 
     <meta name="author" content="Bichr Briaghle">
-
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo e(asset('assets/frontend/img/word of designs 2 logo.png')); ?>" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="<?php echo e(asset('assets/frontend/img/word of designs 2 logo.png')); ?>">
     <script src="https://kit.fontawesome.com/9eaf5f04c1.js" crossorigin="anonymous"></script>
-
-
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="<?php echo e(get_static_option('site_meta_description')); ?>">
@@ -36,7 +30,6 @@
     <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/vendor/owl.carousel/assets/owl.carousel.min.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/vendor/owl.carousel/assets/owl.theme.default.min.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/vendor/magnific-popup/magnific-popup.min.css')); ?>">
-
     <!-- Theme CSS -->
     <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/theme.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/theme-elements.css')); ?>">
@@ -45,14 +38,11 @@
 
     <!-- Skin CSS -->
     <link id="skinCSS" rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/skins/default.css')); ?>">
-
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/custom.css')); ?>">
-
     <!-- Head Libs -->
     <script src="<?php echo e(asset('assets/frontend/vendor/modernizr/modernizr.min.js')); ?>"></script>
     <?php if(request()->is('blog/*') || request()->is('singleproject') || request()->is('service/*')): ?>
-
         <?php echo $__env->yieldContent('og-meta'); ?>
     <?php endif; ?>
 </head>

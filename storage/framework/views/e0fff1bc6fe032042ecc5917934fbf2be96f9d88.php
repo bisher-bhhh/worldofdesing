@@ -19,17 +19,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mt-md-5 mb-3">
-                        <div class="card">
-                            <div class="seo-fact sbg2">
-                                <div class="p-4 d-flex justify-content-between align-items-center">
-                                    <div class="seofct-icon"><i class="ti-share"></i> <?php echo e(__('Total Blogs')); ?></div>
-                                    <h2><?php echo e($blog_count); ?></h2>
-                                </div>
-                                <canvas id="seolinechart2" height="50"></canvas>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col-md-4 mt-md-5 mb-3">
                         <div class="card">
                             <div class="seo-fact sbg3">
@@ -41,39 +31,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mt-md-5 mb-3">
-                        <div class="card">
-                            <div class="seo-fact sbg4">
-                                <div class="p-4 d-flex justify-content-between align-items-center">
-                                    <div class="seofct-icon"><i class="ti-share"></i> <?php echo e(__('Total Team Member')); ?></div>
-                                    <h2><?php echo e($total_team_member); ?></h2>
-                                </div>
-                                <canvas id="seolinechart2" height="50"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mt-md-5 mb-3">
-                        <div class="card">
-                            <div class="seo-fact sbg1">
-                                <div class="p-4 d-flex justify-content-between align-items-center">
-                                    <div class="seofct-icon"><i class="ti-share"></i> <?php echo e(__('Total Counterup')); ?></div>
-                                    <h2><?php echo e($total_counterup); ?></h2>
-                                </div>
-                                <canvas id="seolinechart2" height="50"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mt-md-5 mb-3">
-                        <div class="card">
-                            <div class="seo-fact sbg2">
-                                <div class="p-4 d-flex justify-content-between align-items-center">
-                                    <div class="seofct-icon"><i class="ti-share"></i> <?php echo e(__('Total Price Plan')); ?></div>
-                                    <h2><?php echo e($total_price_plan); ?></h2>
-                                </div>
-                                <canvas id="seolinechart2" height="50"></canvas>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    
+                    
                     <div class="col-md-4 mt-md-5 mb-3">
                         <div class="card">
                             <div class="seo-fact sbg3">
@@ -85,28 +45,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mt-md-5 mb-3">
-                        <div class="card">
-                            <div class="seo-fact sbg4">
-                                <div class="p-4 d-flex justify-content-between align-items-center">
-                                    <div class="seofct-icon"><i class="ti-share"></i> <?php echo e(__('Total Services')); ?></div>
-                                    <h2><?php echo e($total_services); ?></h2>
-                                </div>
-                                <canvas id="seolinechart2" height="50"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mt-md-5 mb-3">
-                        <div class="card">
-                            <div class="seo-fact sbg1">
-                                <div class="p-4 d-flex justify-content-between align-items-center">
-                                    <div class="seofct-icon"><i class="ti-share"></i> <?php echo e(__('Total Key Feature')); ?></div>
-                                    <h2><?php echo e($total_key_features); ?></h2>
-                                </div>
-                                <canvas id="seolinechart2" height="50"></canvas>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    
                 </div>
             </div>
         </div>

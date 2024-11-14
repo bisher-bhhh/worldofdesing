@@ -32,7 +32,7 @@
                             <li class="{{active_menu('admin-home/new-user')}}"><a href="{{route('admin.new.user')}}">{{__('Add New Admin')}}</a></li>
                         </ul>
                     </li>
-                        <li
+                        {{-- <li
                             class="
                             {{active_menu('admin-home/newsletter')}}
                             @if(request()->is('admin-home/newsletter/*')) active @endif
@@ -43,24 +43,24 @@
                                 <li class="{{active_menu('admin-home/newsletter')}}"><a href="{{route('admin.newsletter')}}">{{__('All Subscriber')}}</a></li>
                                 <li class="{{active_menu('admin-home/newsletter/all')}}"><a href="{{route('admin.newsletter.mail')}}">{{__('Send Mail To All')}}</a></li>
                             </ul>
-                        </li>
+                        </li> --}}
                     @endif
-                        <li class="{{active_menu('admin-home/home-variant')}}">
+                        {{-- <li class="{{active_menu('admin-home/home-variant')}}">
                             <a href="{{route('admin.home.variant')}}"
                                aria-expanded="true">
                                 <i class="ti-file"></i>
                                 <span>{{__('Home Variant')}}</span>
                             </a>
-                        </li>
+                        </li> --}}
                         
-                        <li class="{{active_menu('admin-home/navbar-settings')}}">
+                        {{-- <li class="{{active_menu('admin-home/navbar-settings')}}">
                             <a href="{{route('admin.navbar.settings')}}"
                                aria-expanded="true">
                                 <i class="ti-file"></i>
                                 <span>{{__('Nabvar Settings')}}</span>
                             </a>
-                        </li>
-                        <li class="@if(request()->is('admin-home/home-page-01/*')  ) active @endif
+                        </li> --}}
+                        {{-- <li class="@if(request()->is('admin-home/home-page-01/*')  ) active @endif
                         {{active_menu('admin-home/header')}}
                         {{active_menu('admin-home/keyfeatures')}}
                                 ">
@@ -93,9 +93,9 @@
                                 <li class="{{active_menu('admin-home/home-page-01/newsletter')}}"> <a href="{{route('admin.homeone.newsletter')}}">{{__('Newsletter Area')}}</a></li>
                                 <li class="{{active_menu('admin-home/home-page-01/section-manage')}}"> <a href="{{route('admin.homeone.section.manage')}}">{{__('Section Manage')}}</a></li>
                             </ul>
-                        </li>
+                        </li> --}}
 
-                        <li class="@if(request()->is('admin-home/about-page/*')  ) active @endif ">
+                        {{-- <li class="@if(request()->is('admin-home/about-page/*')  ) active @endif ">
                             <a href="javascript:void(0)"
                                aria-expanded="true">
                                 <i class="ti-home"></i>
@@ -106,8 +106,8 @@
                                 <li class="{{active_menu('admin-home/about-page/team-member')}}"><a href="{{route('admin.about.team.member')}}">{{__('Team Member Section')}}</a></li>
 
                             </ul>
-                        </li>
-                        <li class="@if(request()->is('admin-home/service-page/*')  ) active @endif
+                        </li> --}}
+                        {{-- <li class="@if(request()->is('admin-home/service-page/*')  ) active @endif
                                 ">
                             <a href="javascript:void(0)"
                                aria-expanded="true">
@@ -118,8 +118,8 @@
                                 <li class="{{active_menu('admin-home/service-page/price-plan')}}"><a href="{{route('admin.service.page.price.plan')}}">{{__('Price Plan Section')}}</a></li>
                                 <li class="{{active_menu('admin-home/service-page/cta')}}"><a href="{{route('admin.service.page.cta')}}">{{__('Call TO Action Section')}}</a></li>
                             </ul>
-                        </li>
-                        <li class="@if(request()->is('admin-home/team-page/*')  ) active @endif">
+                        </li> --}}
+                        {{-- <li class="@if(request()->is('admin-home/team-page/*')  ) active @endif">
                             <a href="javascript:void(0)"
                                aria-expanded="true">
                                 <i class="ti-home"></i>
@@ -129,7 +129,7 @@
                                 <li class="{{active_menu('admin-home/team-page/about-team')}}"><a href="{{route('admin.team.page.about')}}">{{__('About Team Section')}}</a></li>
                                 <li class="{{active_menu('admin-home/team-page/team-member')}}"><a href="{{route('admin.team.page.team.member')}}">{{__('Team Members Section')}}</a></li>
                             </ul>
-                        </li>
+                        </li> --}}
                         <li class="@if(request()->is('admin-home/contact-page/*')  ) active @endif">
                             <a href="javascript:void(0)"
                                aria-expanded="true">
@@ -137,34 +137,34 @@
                                 <span>{{__('Contact Page Manage')}}</span>
                             </a>
                             <ul class="collapse">
-                                <li class="{{active_menu('admin-home/contact-page/contact-info')}}"><a href="{{route('admin.contact.info')}}">{{__('Contact Info')}}</a></li>
-                                <li class="{{active_menu('admin-home/contact-page/form-area')}}"><a href="{{route('admin.contact.page.form.area')}}">{{__('Form Area')}}</a></li>
+                                {{-- <li class="{{active_menu('admin-home/contact-page/contact-info')}}"><a href="{{route('admin.contact.info')}}">{{__('Contact Info')}}</a></li> --}}
+                                {{-- <li class="{{active_menu('admin-home/contact-page/form-area')}}"><a href="{{route('admin.contact.page.form.area')}}">{{__('Form Area')}}</a></li> --}}
                                 <li class="{{active_menu('admin-home/contact-page/map')}}"><a href="{{route('admin.contact.page.map')}}">{{__('Google Map Area')}}</a></li>
                             </ul>
                         </li>
-                        <li class="{{active_menu('admin-home/quote-page')}}">
+                        {{-- <li class="{{active_menu('admin-home/quote-page')}}">
                             <a href="{{route('admin.quote.page')}}"
                                aria-expanded="true">
                                 <i class="ti-dashboard"></i>
                                 <span>{{__('Quote Page Manage')}}</span>
                             </a>
-                        </li>
-                        <li class="{{active_menu('admin-home/order-page')}}">
+                        </li> --}}
+                        {{-- <li class="{{active_menu('admin-home/order-page')}}">
                             <a href="{{route('admin.order.page')}}"
                                aria-expanded="true">
                                 <i class="ti-dashboard"></i>
                                 <span>{{__('Order Page Manage')}}</span>
                             </a>
-                        </li>
-                    <li class="{{active_menu('admin-home/topbar')}}">
+                        </li> --}}
+                    {{-- <li class="{{active_menu('admin-home/topbar')}}">
                         <a href="{{route('admin.topbar')}}"
                            aria-expanded="true">
                             <i class="ti-dashboard"></i>
                             <span>{{__('Top Bar Settings')}}</span>
                         </a>
-                    </li>
+                    </li> --}}
 
-                    <li class="
+                    {{-- <li class="
                     @if(request()->is('admin-home/services/*')) active @endif
                     {{active_menu('admin-home/services')}}
                             ">
@@ -177,7 +177,7 @@
                             <li class="{{active_menu('admin-home/services')}}"><a href="{{route('admin.services')}}">{{__('New/All Services')}}</a></li>
                             <li class="{{active_menu('admin-home/services/category')}}"><a href="{{route('admin.service.category')}}">{{__('Category')}}</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <li class="
                     @if(request()->is('admin-home/works/*')) active @endif
                     {{active_menu('admin-home/works')}}
@@ -192,34 +192,34 @@
                             <li class="{{active_menu('admin-home/work/category')}}"><a href="{{route('admin.work.category')}}">{{__('Category')}}</a></li>
                         </ul>
                     </li>
-                    <li class="{{active_menu('admin-home/faq')}}">
+                    {{-- <li class="{{active_menu('admin-home/faq')}}">
                         <a href="{{route('admin.faq')}}" aria-expanded="true"><i class="ti-control-forward"></i> <span>{{__('Faq')}}</span></a>
-                    </li>
-                    <li class="{{active_menu('admin-home/brands')}}">
+                    </li> --}}
+                    {{-- <li class="{{active_menu('admin-home/brands')}}">
                         <a href="{{route('admin.brands')}}" aria-expanded="true"><i class="ti-control-forward"></i> <span>{{__('Brand Logos')}}</span></a>
-                    </li>
-                    <li class="{{active_menu('admin-home/price-plan')}}">
+                    </li> --}}
+                    {{-- <li class="{{active_menu('admin-home/price-plan')}}">
                         <a href="{{route('admin.price.plan')}}" aria-expanded="true"><i class="ti-control-forward"></i> <span>{{__('Price Plan')}}</span></a>
-                    </li>
-                    <li class="{{active_menu('admin-home/team-member')}}">
+                    </li> --}}
+                    {{-- <li class="{{active_menu('admin-home/team-member')}}">
                         <a href="{{route('admin.team.member')}}" aria-expanded="true"><i class="ti-control-forward"></i> <span>{{__('Team Members')}}</span></a>
-                    </li>
+                    </li> --}}
                     <li class="{{active_menu('admin-home/testimonial')}}">
                         <a href="{{route('admin.testimonial')}}" aria-expanded="true"><i class="ti-control-forward"></i> <span>{{__('Testimonial')}}</span></a>
                     </li>
-                    <li class="{{active_menu('admin-home/blog-page')}}">
+                    {{-- <li class="{{active_menu('admin-home/blog-page')}}">
                         <a href="{{route('admin.blog.page')}}"
                            aria-expanded="true">
                             <i class="ti-file"></i>
                             <span>{{__('Blog Page')}}</span>
                         </a>
-                    </li>
-                    <li class="{{active_menu('admin-home/counterup')}}">
+                    </li> --}}
+                    {{-- <li class="{{active_menu('admin-home/counterup')}}">
                         <a href="{{route('admin.counterup')}}" aria-expanded="true"><i class="ti-exchange-vertical"></i> <span>{{__('Counterup')}}</span></a>
-                    </li>
+                    </li> --}}
 
-                    @if('super_admin' == auth()->user()->role || 'admin' == auth()->user()->role || 'editor' == auth()->user()->role)
-                        <li
+                    {{-- @if('super_admin' == auth()->user()->role || 'admin' == auth()->user()->role || 'editor' == auth()->user()->role)
+                        {{-- <li
                                 class="
                         {{active_menu('admin-home/blog')}}
                                 {{active_menu('admin-home/blog-category')}}
@@ -233,9 +233,9 @@
                                 <li class="{{active_menu('admin-home/blog-category')}}"><a href="{{route('admin.blog.category')}}">{{__('Category')}}</a></li>
                                 <li class="{{active_menu('admin-home/new-blog')}}"><a href="{{route('admin.blog.new')}}">{{__('Add New Post')}}</a></li>
                             </ul>
-                        </li>
-                    @endif
-                    @if('super_admin' == auth()->user()->role || 'admin' == auth()->user()->role)
+                        </li> --}}
+                    {{-- @endif  --}}
+                    {{-- @if('super_admin' == auth()->user()->role || 'admin' == auth()->user()->role)
                         <li class="@if(request()->is('admin-home/footer/*')) active @endif">
                             <a href="javascript:void(0)"
                                aria-expanded="true">
@@ -295,7 +295,7 @@
                             class="@if(request()->is('admin-home/languages/*') || request()->is('admin-home/languages') ) active @endif">
                             <a href="{{route('admin.languages')}}" aria-expanded="true"><i class="ti-signal"></i> <span>{{__('Languages')}}</span></a>
                         </li>
-                    @endif
+                    @endif --}}
                 </ul>
             </nav>
         </div>
