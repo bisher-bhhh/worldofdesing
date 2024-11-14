@@ -425,7 +425,7 @@
                                 <div
                                     class="col-lg-4 p-1 isotope-item <?php echo e(get_work_category_by_id($data->id, 'slug')); ?>">
                                     <div class="portfolio-item">
-                                        <a href=<?php echo e(route('frontend.portfolioproject', ['id' =>$data->id ])); ?>
+                                        <a href=<?php echo e(route('frontend.singleproject', ['id' => $data->id])); ?>
 
                                             data-ajax-on-modal>
                                             <span class="thumb-info thumb-info-lighten">

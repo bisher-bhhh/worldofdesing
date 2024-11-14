@@ -423,7 +423,7 @@
                                 <div
                                     class="col-lg-4 p-1 isotope-item {{ get_work_category_by_id($data->id, 'slug') }}">
                                     <div class="portfolio-item">
-                                        <a href={{ route('frontend.portfolioproject', ['id' =>$data->id ]) }}
+                                        <a href={{route('frontend.singleproject', ['id' => $data->id]) }}
                                             data-ajax-on-modal>
                                             <span class="thumb-info thumb-info-lighten">
                                                 <span class="thumb-info-wrapper">
